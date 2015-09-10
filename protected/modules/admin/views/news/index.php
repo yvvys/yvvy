@@ -123,7 +123,7 @@
 
 											<td class="center"><?php echo date('Y-m-d H:i:s',$v['created'])?></td>
 
-											<td class="center"><?php echo date('Y-m-d H:i:s',$v['updated'])?></td>
+											<td class="center"><?php echo $v['updated']<> $v['created'] ? date('Y-m-d H:i:s',$v['updated']) : '暂无修改'?></td>
 
 											<td><?php echo $v['issuer']?></td>
 

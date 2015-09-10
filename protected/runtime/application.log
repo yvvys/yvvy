@@ -2400,3 +2400,39 @@ Stack trace:
 #16 {main}
 REQUEST_URI=/index.php?r=admin/news/
 ---
+2015/09/10 11:48:03 [error] [exception.CException] exception 'CException' with message 'NewsController cannot find the requested view "update".' in D:\WWW\yvvy\yii\web\CController.php:878
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(782): CController->renderPartial('update', Array, true)
+#1 D:\WWW\yvvy\protected\modules\admin\controllers\NewsController.php(58): CController->render('update', Array)
+#2 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): NewsController->actionUpdate()
+#3 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\WWW\yvvy\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('update')
+#7 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/upda...')
+#8 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#9 D:\WWW\yvvy\index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=admin/news/update
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/news/index
+---
+2015/09/10 13:34:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'updated' doesn't have a default value. The SQL statement executed was: INSERT INTO `news` (`title`, `created`, `content`, `issuer`) VALUES (:yp0, :yp1, :yp2, :yp3). Bound with :yp0='qwwq', :yp1=1441863278, :yp2='<p>千万千万哦</p>', :yp3='路人甲'.
+in D:\WWW\yvvy\protected\modules\admin\controllers\NewsController.php (48)
+in D:\WWW\yvvy\index.php (15)
+2015/09/10 13:34:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1364 Field 'updated' doesn't have a default value. The SQL statement executed was: INSERT INTO `news` (`title`, `created`, `content`, `issuer`) VALUES (:yp0, :yp1, :yp2, :yp3). Bound with :yp0='qwwq', :yp1=1441863278, :yp2='<p>千万千万哦</p>', :yp3='路人甲'' in D:\WWW\yvvy\yii\db\CDbCommand.php:358
+Stack trace:
+#0 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 D:\WWW\yvvy\protected\modules\admin\controllers\NewsController.php(48): CActiveRecord->save()
+#3 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): NewsController->actionUpdate()
+#4 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\WWW\yvvy\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('update')
+#8 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/upda...')
+#9 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#10 D:\WWW\yvvy\index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=admin/news/update
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/news/update
+---

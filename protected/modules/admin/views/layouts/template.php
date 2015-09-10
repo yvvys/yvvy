@@ -283,7 +283,7 @@
 
 					<i class="icon-table"></i> 
 
-					<span class="title">Form Stuff</span>
+					<span class="title">新闻管理</span>
 
 					<span class="selected"></span>
 
@@ -295,59 +295,21 @@
 
 						<li >
 
-							<a href="form_layout.html">
+							<a href="<?php echo Yii::app()->createUrl('admin/news')?>">
 
-							Form Layouts</a>
-
-						</li>
-
-						<li >
-
-							<a href="form_samples.html">
-
-							Advance Form Samples</a>
+							新闻列表</a>
 
 						</li>
 
 						<li >
 
-							<a href="form_component.html">
+							<a href="<?php echo Yii::app()->createUrl('admin/news/update')?>">
 
-							Form Components</a>
-
-						</li>
-
-						<li >
-
-							<a href="form_wizard.html">
-
-							Form Wizard</a>
+							新闻添加</a>
 
 						</li>
 
-						<li class="active">
-
-							<a href="form_validation.html">
-
-							Form Validation</a>
-
-						</li>
-
-						<li >
-
-							<a href="form_fileupload.html">
-
-							Multiple File Upload</a>
-
-						</li>
-
-						<li >
-
-							<a href="form_dropzone.html">
-
-							Dropzone File Upload</a>
-
-						</li>
+						
 
 					</ul>
 

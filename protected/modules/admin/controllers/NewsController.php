@@ -34,14 +34,16 @@ public function actionUpdate(){
             }
             
             $model->title                   =   $_POST['News']['title'];
-            if($news_id){
-                $model->updated                 =   time();
-            }else{
+            if(!$news_id){
                 $model->created                 =   time();
             }
-            
+                 $model->updated                 =   time();
             $model->content                 =   $_POST['News']['content'];
-            $model->issuer                  =   Yii::app()->user->name;
+            if(Yii::app()->user->isGuest){
+                 $model->issuer                  =   '路人甲';
+            }else{
+                $model->issuer                  =   Yii::app()->user->name;
+            }
             if($model->save()){
                 $this->redirect($this->createUrl('news/index',array('News_page'=>$_GET['News_page'])));
             }else{
