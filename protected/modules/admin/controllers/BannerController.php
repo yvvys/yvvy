@@ -4,6 +4,7 @@ class BannerController extends Controller
 
 
 	public function actionIndex(){
+		
      		$criteria = new CDbCriteria(); 
 			$criteria->order = 'banner_id desc'; 
 			
@@ -64,8 +65,8 @@ class BannerController extends Controller
 
 	public function actionDelete(){
 		$banner_id=Yii::app()->request->getParam('banner_id');
-		$model=Banner::model()->findbypk($banner_id);
-		if($model==null) throw new CHttpException(400,'该数据不存在！');
+		
+		//if($model==null) throw new CHttpException(400,'该数据不存在！');
 		Banner::model()->findByPk($banner_id)->delete();
 		$this->redirect($this->createUrl('banner/index'));
 	}
