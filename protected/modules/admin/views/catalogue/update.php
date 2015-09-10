@@ -100,7 +100,7 @@
 
 										<div class="controls">
 
-											<?php echo $form->dropDownList($model,'parent_id',$select,array('class'=>'span6',
+											<?php echo $form->dropDownList($model,'parent_id',$select,array('class'=>'span6','prompt'=>'-----顶级分类-----',
 'options'=>array($data['parent_id']=>array('selected'=>true))));?>
 
 										</div>
@@ -133,7 +133,6 @@
 										</div>
 
 									</div>
-									<?php  echo true?>
 
 									<div class="form-actions">
 

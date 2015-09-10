@@ -118,9 +118,9 @@
 
 											<td class="center"><?php echo $v['is_sale']?  "是" : "否";?></td>
 											
-											<td class="edit">编辑</td>
+											<td class="edit"><a href="<?php echo Yii::app()->createUrl('admin/spu/update',array('id'=>$v['spu_id']))?>">编辑</a></td>
 
-											<td class="delete">删除</td>
+											<td class="delete"><a href="<?php echo Yii::app()->createUrl('admin/spu/delete',array('id'=>$v['spu_id']))?>">删除</a></td>
 
 										</tr>
 										<?php } ?>

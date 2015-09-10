@@ -33,39 +33,18 @@ class Catalogue extends CActiveRecord
         );
 
   }
-  //查询数据库，将数据库信息生成数组
-  public function getArr()
-  {
-    $data = $this::model()->findAll();
-    $arr = array();
-    foreach($data as $v){
-      array_push($arr,array('id'=>$v['id'],'name'=>$v['name'],'parent_id'=>$v['parent_id'],'describe'=>$v['describe']));
-    }
-    return $arr;
-  }
 
-  //获取子孙树
-  public function getAll($id=0)
+  //获取家谱树
+  public function getAll()
   {
-    $arr = $this->getArr();
-    $result = $this->getTree($id,$arr);
-    return $result;
+    $result =  $this::model()->findAll(array('select'=>'id,tree','order' => 'tree',));
+    foreach($result as $v)
+    {
+      $data[$v['id']] = $v['tree'];
+    }
+    return $data;
   } 
-  //获取目录的家谱树
-  public function getTree($id,$arr,$lev=NULL)
-  {
-      static $tree = array();
-      foreach($arr as $v)
-      {
-        if($v['parent_id'] == $id)
-        {
-            $v['lev'] = $lev.$v['name'];
-            $tree[$v['id']] = $v['lev'];
-            $this->getTree($v['id'],$arr,$lev.$v['name'].' > ');
-        }    
-      }
-      return $tree;
-  }
+
   //获取子孙树以及子目录的个数
   public function getSon($id)
   {
