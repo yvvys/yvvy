@@ -108,7 +108,7 @@
 										<label for="Catalogue_name" class="control-label required">广告分组<span class="required">*</span></label>										
 										<div class="controls">
 											
-											<?php echo CHtml::dropDownList('Banner[banner_group]',$data->group, Banner::model()->bannerGroup() ,array('must' => 'yes','class' => '')).'或者创建新的分组:';?>
+											<?php echo CHtml::dropDownList('Banner[banner_group]',$model->banner_group, Banner::model()->bannerGroup() ,array('must' => 'yes','class' => '')).'或者创建新的分组:';?>
 											<?php echo CHtml::textField('Banner[group_new]','',array('class' => 'itext w180'))?>
 																						
 										</div>
