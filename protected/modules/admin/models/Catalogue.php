@@ -38,6 +38,7 @@ class Catalogue extends CActiveRecord
   public function getAll()
   {
     $result =  $this::model()->findAll(array('select'=>'id,tree','order' => 'tree',));
+    $data =array();
     foreach($result as $v)
     {
       $data[$v['id']] = $v['tree'];

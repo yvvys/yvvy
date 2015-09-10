@@ -9,15 +9,12 @@ class CatalogueController extends Controller
 		$this->render('index',array('data'=>$data));
 	}
 	//商品目录创建
-	public function actionCreate($id=1)
+	public function actionCreate()
 	{
 		
 		$model = new Catalogue;
-		$result =  $model->findAll(array('select'=>'id,tree','order' => 'tree',));
-		foreach($result as $v)
-		{
-			$data[$v['id']] = $v['tree'];
-		}
+		$data =  Catalogue::model()->getAll();
+
 		if(isset($_POST['Catalogue']))
 		{
 			
