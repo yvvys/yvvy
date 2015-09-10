@@ -6,10 +6,14 @@ class BannerController extends Controller
 	public function actionIndex(){
      		$criteria = new CDbCriteria(); 
 			$criteria->order = 'banner_id desc'; 
-			if(isset($_GET['search']) && $_GET['search'] != ''){
-                $keyword = trim($_GET['search']);
-                $criteria->addSearchCondition('banner_group', $keyword,true,'OR');
-                $criteria->addSearchCondition('title', $keyword,true,'OR');    
+			
+			if(isset($_POST[yt0]) && $_POST[yt0]!= ''){
+				
+                $keyword = trim($_POST['keyword']);
+                $criteria->addSearchCondition('title', $keyword,true,'OR');  
+                $group = trim($_POST['type']);
+                $criteria->addSearchCondition('banner_group', $group,true,'OR');
+                
             }
             $dataProvider=new CActiveDataProvider('Banner',array(
                 'criteria'=>$criteria,

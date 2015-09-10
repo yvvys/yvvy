@@ -77,24 +77,27 @@
 
 									<!-- toolBar -->
 									<div class="sub-title-box toolbar">
-									    <div class="absolute-right">
+									    <div class="input-append">
+									     <form action="<?php echo $this->createUrl($this->getAction()->id)?>" method="post" id="form1">
 									        <div style="float: left">
-									            <form action="<?php echo $this->createUrl($this->getAction()->id)?>" method="get" id="form1">
+									           
 									            <?php 
 									            
-									            echo CHtml::dropDownList('type', $_GET['type'], Banner::bannerGroup(), array('empty'=>'--请选择--','onchange'=>'changeType()')); 
+									            echo CHtml::dropDownList('type', $_GET['type'], Banner::bannerGroup(), array('empty'=>'--请选择--','class'=>'m-wrap','onchange'=>'changeType()')); 
 
 									            ?>
-									            </form>
+									            
 									        </div>
 									        <div style="float: left">
-									        <form action="<?php echo $this->createUrl($this->getAction()->id)?>" method="get">
+									        
 									            <?php echo CHtml::textField('keyword',$_GET['keyword'],
-									                array('size'=>30,'class'=>'itext','placeholder'=>'分组\标题'))?>
+									                array('size'=>30,'class'=>'m-wrap','placeholder'=>'分组\标题'))?>
 
-									            <?php echo CHtml::submitButton('Search',array('class'=>'submit'))?>
-									        </form>
+									            <?php echo CHtml::submitButton('搜索',array('class'=>'btn blue','id'=>'search'))?>
+									        
 									        </div>
+									        </form>	
+
 									    </div>
 									</div>
 									<!-- toolBar -->
