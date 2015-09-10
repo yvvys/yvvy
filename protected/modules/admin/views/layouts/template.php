@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>Metronic | Form Stuff - Form Validation</title>
+	<title>YvvY | 后台管理</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -22,33 +22,41 @@
 
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-	<link href="assets/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="assets/admin/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="assets/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="assets/admin/css/style-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/style-metro.css" rel="stylesheet" type="text/css"/>
 
-	<link href="assets/admin/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/style.css" rel="stylesheet" type="text/css"/>
 
-	<link href="assets/admin/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 
-	<link href="assets/admin/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="/admin/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 
-	<link href="assets/admin/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END GLOBAL MANDATORY STYLES -->
 
 	<!-- BEGIN PAGE LEVEL STYLES -->
 
-	<link rel="stylesheet" type="text/css" href="assets/admin/css/select2_metro.css" />
+	<link rel="stylesheet" type="text/css" href="/admin/css/select2_metro.css" />
 
-	<link rel="stylesheet" type="text/css" href="assets/admin/css/chosen.css" />
+	<link rel="stylesheet" type="text/css" href="/admin/css/chosen.css" />
 
 	<!-- END PAGE LEVEL STYLES -->
 
-	<link rel="shortcut icon" href="assets/admin/image/favicon.ico" />
+	<link rel="shortcut icon" href="/admin/image/favicon.ico" />
+	<script src="/admin/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<?php
+		Yii::app()->clientScript->registerScript(
+        	'myHideEffect',
+        	'$(".showsuccess").animate({opacity: 0.5}, 3000).fadeOut("slow");',
+        	CClientScript::POS_READY
+    	);
+	?>
 
 </head>
 
@@ -72,7 +80,7 @@
 
 				<a class="brand" href="index.html">
 
-				<img src="assets/admin/image/logo.png" alt="logo" />
+				<img src="/admin/image/logo.png" alt="logo" />
 
 				</a>
 
@@ -82,7 +90,7 @@
 
 				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 
-				<img src="assets/admin/image/menu-toggler.png" alt="" />
+				<img src="/admin/image/menu-toggler.png" alt="" />
 
 				</a>          
 
@@ -100,7 +108,7 @@
 
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-						<img alt="" src="assets/admin/image/avatar1_small.jpg" />
+						<img alt="" src="/admin/image/avatar1_small.jpg" />
 
 						<span class="username">Bob Nilson</span>
 
@@ -244,7 +252,7 @@
 
 					<i class="icon-bookmark-empty"></i> 
 
-					<span class="title">UI Features</span>
+					<span class="title">广告管理</span>
 
 					<span class="arrow "></span>
 
@@ -253,84 +261,17 @@
 					<ul class="sub-menu">
 
 						<li >
-
-							<a href="ui_general.html">
-
-							General</a>
+						<a href="<?php echo Yii::app()->createUrl('admin/banner')?>">广告列表</a>
 
 						</li>
 
 						<li >
 
-							<a href="ui_buttons.html">
-
-							Buttons</a>
+							<a href="<?php echo Yii::app()->createUrl('admin/banner/update')?>">广告添加</a>
 
 						</li>
 
-						<li >
-
-							<a href="ui_modals.html">
-
-							Enhanced Modals</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_tabs_accordions.html">
-
-							Tabs & Accordions</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_jqueryui.html">
-
-							jQuery UI Components</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_sliders.html">
-
-							Sliders</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_tiles.html">
-
-							Tiles</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_typography.html">
-
-							Typography</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_tree.html">
-
-							Tree View</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_nestable.html">
-
-							Nestable List</a>
-
-						</li>
+					
 
 					</ul>
 
@@ -1066,54 +1007,54 @@
 
 	<!-- BEGIN CORE PLUGINS -->
 
-	<script src="assets/admin/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+	
 
-	<script src="assets/admin/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 
 	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
-	<script src="assets/admin/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+	<script src="/admin/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
 
-	<script src="assets/admin/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/admin/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--[if lt IE 9]>
 
-	<script src="assets/admin/js/excanvas.min.js"></script>
+	<script src="/admin/js/excanvas.min.js"></script>
 
-	<script src="assets/admin/js/respond.min.js"></script>  
+	<script src="/admin/js/respond.min.js"></script>  
 
 	<![endif]-->   
 
-	<script src="assets/admin/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery.slimscroll.min.js" type="text/javascript"></script>
 
-	<script src="assets/admin/js/jquery.blockui.min.js" type="text/javascript"></script>  
+	<script src="/admin/js/jquery.blockui.min.js" type="text/javascript"></script>  
 
-	<script src="assets/admin/js/jquery.cookie.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery.cookie.min.js" type="text/javascript"></script>
 
-	<script src="assets/admin/js/jquery.uniform.min.js" type="text/javascript" ></script>
+	<script src="/admin/js/jquery.uniform.min.js" type="text/javascript" ></script>
 
 	<!-- END CORE PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 
-	<script type="text/javascript" src="assets/admin/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="/admin/js/jquery.validate.min.js"></script>
 
-	<script type="text/javascript" src="assets/admin/js/additional-methods.min.js"></script>
+	<script type="text/javascript" src="/admin/js/additional-methods.min.js"></script>
 
-	<script type="text/javascript" src="assets/admin/js/select2.min.js"></script>
+	<script type="text/javascript" src="/admin/js/select2.min.js"></script>
 
-	<script type="text/javascript" src="assets/admin/js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="/admin/js/chosen.jquery.min.js"></script>
 
 	<!-- END PAGE LEVEL PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL STYLES -->
 
-	<script src="assets/admin/js/app.js"></script>
+	<script src="/admin/js/app.js"></script>
 
-	<script src="assets/admin/js/form-validation.js"></script> 
+	<script src="/admin/js/form-validation.js"></script> 
 
 	<!-- END PAGE LEVEL STYLES -->    
-
+	<!--<script src="/admin/js/bootstrap-fileupload.js"></script>-->
 	<script>
 
 		jQuery(document).ready(function() {   

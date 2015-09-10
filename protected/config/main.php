@@ -53,12 +53,12 @@ return array(
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
-
+		/*
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
 		),
-
+		*/
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -70,6 +70,8 @@ return array(
 				
 				array(
 					'class'=>'CWebLogRoute',
+				
+
 				),
 				
 			),
