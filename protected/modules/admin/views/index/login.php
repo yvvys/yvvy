@@ -22,31 +22,31 @@
 
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-	<link href="admin/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="admin/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="admin/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="admin/css/style-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/style-metro.css" rel="stylesheet" type="text/css"/>
 
-	<link href="admin/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/style.css" rel="stylesheet" type="text/css"/>
 
-	<link href="admin/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 
-	<link href="admin/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="/admin/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 
-	<link href="admin/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END GLOBAL MANDATORY STYLES -->
 
 	<!-- BEGIN PAGE LEVEL STYLES -->
 
-	<link href="admin/css/login.css" rel="stylesheet" type="text/css"/>
+	<link href="/admin/css/login.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END PAGE LEVEL STYLES -->
 
-	<link rel="shortcut icon" href="admin/image/favicon.ico" />
+	<link rel="shortcut icon" href="/admin/image/favicon.ico" />
 
 </head>
 
@@ -60,7 +60,7 @@
 
 	<div class="logo">
 
-		<img src="admin/image/logo-big.png" alt="" /> 
+		<img src="/admin/image/logo-big.png" alt="" /> 
 
 	</div>
 
@@ -134,7 +134,7 @@
 
 	<div class="copyright">
 
-		2013 &copy; Metronic. Admin Dashboard Template.
+		2013 &copy; Metronic. /admin Dashboard Template.
 
 	</div>
 
@@ -144,43 +144,43 @@
 
 	<!-- BEGIN CORE PLUGINS -->
 
-	<script src="admin/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery-1.10.1.min.js" type="text/javascript"></script>
 
-	<script src="admin/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 
 	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
-	<script src="admin/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+	<script src="/admin/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
 
-	<script src="admin/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/admin/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--[if lt IE 9]>
 
-	<script src="admin/js/excanvas.min.js"></script>
+	<script src="/admin/js/excanvas.min.js"></script>
 
-	<script src="admin/js/respond.min.js"></script>  
+	<script src="/admin/js/respond.min.js"></script>  
 
 	<![endif]-->   
 
-	<script src="admin/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery.slimscroll.min.js" type="text/javascript"></script>
 
-	<script src="admin/js/jquery.blockui.min.js" type="text/javascript"></script>  
+	<script src="/admin/js/jquery.blockui.min.js" type="text/javascript"></script>  
 
-	<script src="admin/js/jquery.cookie.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery.cookie.min.js" type="text/javascript"></script>
 
-	<script src="admin/js/jquery.uniform.min.js" type="text/javascript" ></script>
+	<script src="/admin/js/jquery.uniform.min.js" type="text/javascript" ></script>
 
 	<!-- END CORE PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 
-	<script src="admin/js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery.validate.min.js" type="text/javascript"></script>
 
 	<!-- END PAGE LEVEL PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 
-	<script src="admin/js/app.js" type="text/javascript"></script>
+	<script src="/admin/js/app.js" type="text/javascript"></script>
     
 
 	<!-- END PAGE LEVEL SCRIPTS --> 
