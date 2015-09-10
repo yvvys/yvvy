@@ -8,19 +8,21 @@ class BannerController extends Controller
 			$criteria->order = 'banner_id desc'; 
 			
 			if(isset($_POST[yt0]) && $_POST[yt0]!= ''){
-				
+		
                 $keyword = trim($_POST['keyword']);
                 $criteria->addSearchCondition('title', $keyword,true,'OR');  
                 $group = trim($_POST['type']);
                 $criteria->addSearchCondition('banner_group', $group,true,'OR');
                 
             }
+
             $dataProvider=new CActiveDataProvider('Banner',array(
                 'criteria'=>$criteria,
                  'pagination'=>array(
                         'pageSize'=>10,
                         ),
             ));
+
             $this->render('index',array(
                         'dataProvider'=>$dataProvider
             ));

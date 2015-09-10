@@ -56,7 +56,7 @@
 
 							<div class="portlet-title">
 
-								<div class="caption"><i class="icon-edit"></i>创建新目录</div>
+								<div class="caption"><i class="icon-edit"></i>SPU编辑</div>
 
 							</div>
 
@@ -71,21 +71,18 @@
 										
 										<?php echo $form->labelEx($model,'spu_id',array('class'=>'control-label')); ?>
 										<div class="controls">
-											
-											<?php echo $form->textField($model,'spu_id',array('class'=>'span6 '));?> 
-											<?php echo $form->error($model,'spu_id');?>
-											
+										
+											<h4 class="span6 m-wrap" name="Spu[spu_id]" type="text"> <?php echo $data['spu_id']?> </h4>
+										
 										</div>
 
 									</div>							
 								
 									<div class="control-group">
 
-										
 										<?php echo $form->labelEx($model,'spu_name',array('class'=>'control-label')); ?>
 										<div class="controls">
-											
-											<?php echo $form->textField($model,'spu_name',array('class'=>'span6 '));?> 
+											<?php echo $form->textField($model,'spu_name',array('class'=>'span6','value'=>$data['spu_name']));?> 
 											<?php echo $form->error($model,'spu_name');?>
 											
 										</div>
@@ -98,7 +95,7 @@
 
 										<div class="controls">
 
-											<?php echo $form->textArea($model,'describe',array('class'=>'span6 ','row'=>'3'));?>
+											<?php echo $form->textArea($model,'describe',array('class'=>'span6 ','value'=>$data['describe'],'row'=>'3'));?>
 
 										</div>
 
@@ -109,9 +106,7 @@
 
 										<div class="controls">
 
-											<?php echo $form->dropDownList($model,'classfy_id',$data,array('class'=>'span6'));?>
-
-											<?php echo $form->error($model,'classfy_id');?>
+											<?php echo $form->dropDownList($model,'classfy_id',$select,array('class'=>'span6','prompt'=>'-----顶级分类-----','options'=>array($data['classfy_id']=>array('selected'=>true))));?>
 
 										</div>
 
@@ -123,9 +118,10 @@
 
 										<div class="controls">
 
+
 											<label class="radio">
 
-											<input type="radio" name="Spu[is_sale]" value="1" checked/>
+											<input type="radio" name="Spu[is_sale]" <?php  if($data['is_sale'] == 1 ){ echo 'checked';}?> value="1" />
 
 											是
 
@@ -133,12 +129,11 @@
 
 											<label class="radio">
 
-											<input type="radio" name="Spu[is_sale]" value="0"  />
+											<input type="radio" name="Spu[is_sale]" <?php  if($data['is_sale'] == 0 ){ echo 'checked';}?> value="0" />
 
 											否
 
 											</label> 
-										</div>
 
 									</div>
 
@@ -156,14 +151,4 @@
 
 						<!-- END EXAMPLE TABLE PORTLET-->
 
-					</div>
 
-				</div>
-
-				<!-- END PAGE CONTENT -->
-
-			</div>
-
-			<!-- END PAGE CONTAINER-->
-
-		</div>
