@@ -91,7 +91,7 @@
 									        <div style="float: left">
 									        
 									            <?php echo CHtml::textField('keyword',$_GET['keyword'],
-									                array('size'=>30,'class'=>'m-wrap','placeholder'=>'分组\标题'))?>
+									                array('size'=>30,'class'=>'m-wrap','placeholder'=>'标题'))?>
 
 									            <?php echo CHtml::submitButton('搜索',array('class'=>'btn blue','id'=>'search'))?>
 									        
