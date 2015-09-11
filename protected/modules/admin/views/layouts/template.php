@@ -321,7 +321,7 @@
 
 					<i class="icon-briefcase"></i> 
 
-					<span class="title">Pages</span>
+					<span class="title">特殊对象</span>
 
 					<span class="arrow "></span>
 
@@ -331,11 +331,11 @@
 
 						<li >
 
-							<a href="page_timeline.html">
+							<a href="<?php echo Yii::app()->createUrl("admin/shop")?>">
 
 							<i class="icon-time"></i>
 
-							Timeline</a>
+							线下门店</a>
 
 						</li>
 
