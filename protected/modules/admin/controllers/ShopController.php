@@ -19,7 +19,7 @@ class ShopController extends Controller
 	public function actionUpdate()
 	{
 		$shop_id = Yii::app()->request->getParam('shop_id');
-		$model = shop::model()->findByPk($shop_id);
+		
 		if(isset($shop_id)){
 			$model = shop::model()->findByPk($shop_id);
 		}else{
