@@ -40,6 +40,7 @@ class GoodsController extends Controller
 
 			if($model->validate())
 			{
+
 				if($model->save())
 				{
 					Yii::app()->user->setFlash('Info','创建SKU成功');

@@ -72,7 +72,7 @@
 
 										<a href='<?php echo Yii::app()->createUrl('admin/goods/update')?>'><button id="sample_editable_1_new" class="btn green">
 
-										创建新的目录 <i class="icon-plus"></i></button></a>
+										创建新的商品 <i class="icon-plus"></i></button></a>
 
 
 									</div>

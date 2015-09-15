@@ -30,8 +30,8 @@ class Goods extends CActiveRecord
 	public function rules()
 	{
 		return array(
+			array("sku_id","checkSku",),
 			array("spu_id","required","message"=>"SPU编号必填",),
-			array("sku_id","required","message"=>"SKU编号必填",),
 			array("sku_name","required","message"=>"SKU名称必填",),
 			array("price","safe",),
 			array("color","required","message"=>"颜色必填",),
@@ -42,6 +42,20 @@ class Goods extends CActiveRecord
 			array("is_top","safe",),
 			);
 
+	}
+
+	public function checkSku()
+	{
+		if(!isset($this->sku_id))
+		{
+			$this->addError('sku_id','SKU编号必填');
+		}
+		
+		$result = Goods::model()->findByPk($this->sku_id);
+		if($result)
+		{
+			$this->addError('sku_id','SKU编号已存在');
+		}
 	}
 
 	public function getId()

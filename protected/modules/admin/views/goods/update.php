@@ -209,13 +209,13 @@ overflow-y:auto;
 
 							<li>
 
-								<a href="#">特殊对象</a>
+								<a href="#">商品信息</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">线下门店</a></li>
+							<li><a href="#">商品信息</a></li>
 
 						</ul>
 
@@ -240,13 +240,16 @@ overflow-y:auto;
 							<div class="portlet-title">
 
 								<div class="caption"><i class="icon-edit"></i>添加SKU</div>
-
+								<?php if(Yii::app()->user->hasFlash('Info')){ 
+										echo Yii::app()->user->getFlash('Info');
+									};?>
 							</div>
 
 							<div class="portlet-body">
 
 								<?php $form = $this->beginWidget('CActiveForm')?>
 								<div class="portlet-body form form-horizontal">
+
 
 								<!-- BEGIN FORM-->
 									<div class="control-group">
@@ -255,12 +258,23 @@ overflow-y:auto;
 										<div class="controls">
 										
 											<?php echo $form->textField($model,'sku_id',array('class'=>'span6 '));?>
-											<?php echo $form->error($model,'shop_id');?>											
+											<?php echo $form->error($model,'sku_id');?>											
 										</div>
 
-									</div>							
+									</div>
+
+									<div class="control-group">
+
+										<?php echo $form->labelEx($model,'sku_name',array('class'=>'control-label'));?>
+										<div class="controls">
+										
+											<?php echo $form->textField($model,'sku_name',array('class'=>'span6 '));?>
+											<?php echo $form->error($model,'sku_name');?>											
+										</div>
+
+									</div>								
 								
-								<div class="control-group">
+									<div class="control-group">
 
 										<label for="Goods_spu_id" class="control-label required">SPU编号<span class="required">*</span></label>										<div class="controls">
 										<input id="autoSearchText" class="span6" name="Goods[spu_id]" type="text" value="<?php echo $model->spu_id?>" />
