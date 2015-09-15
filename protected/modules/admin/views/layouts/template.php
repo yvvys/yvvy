@@ -220,14 +220,6 @@
 
 						<li >
 
-							<a href="layout_horizontal_menu1.html">
-
-							商品分类</a>
-
-						</li>
-
-						<li >
-
 							<a href="<?php echo Yii::app()->createUrl('admin/spu')?>">
 
 							SPU管理</a>

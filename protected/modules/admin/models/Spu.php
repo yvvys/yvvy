@@ -36,6 +36,7 @@ class Spu extends CActiveRecord
 
 	}
 
+
 }
 
 

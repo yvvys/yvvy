@@ -116,7 +116,7 @@
 
 											<label class="radio">
 
-											<input type="radio" name="Catalogue[show]" value="1" checked />
+											<input type="radio" name="Goods[is_top]" value="1"  />
 
 											是
 
@@ -124,7 +124,7 @@
 
 											<label class="radio">
 
-											<input type="radio" name="Catalogue[show]" value="0"  />
+											<input type="radio" name="Goods[is_top]" value="0" checked />
 
 											否
 
