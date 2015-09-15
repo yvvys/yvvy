@@ -23,7 +23,6 @@ class BannerController extends Controller
                         'pageSize'=>10,
                         ),
             ));
-
             $this->render('index',array(
                         'dataProvider'=>$dataProvider
             ));

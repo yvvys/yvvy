@@ -37,6 +37,41 @@ class Spu extends CActiveRecord
 	}
 
 
+	public function classfy_name()
+	{
+		  $rec = array();
+                $criteria = new CDbCriteria;
+                $criteria->select = 't.classfy_name';
+                $criteria->condition = '';
+                $data=Spu::model()->findAll($criteria);
+                for($i=0;$i<sizeof($data); $i++){
+                 $rec[$data[$i]['classfy_name']] = $data[$i]['classfy_name'];
+                }
+                return $rec;
+	}
+
+	public function spu_name($keyword=null)
+	{
+		  $rec = array();
+                $criteria = new CDbCriteria;
+                $criteria->select = 't.spu_id,t.spu_name';
+                if($keyword<>null){
+	                $keyword = trim($_POST['keyword']);
+	                $criteria->addSearchCondition('classfy_name', $keyword,true,'OR');  
+	                $criteria->addSearchCondition('spu_name', $keyword,true,'OR');  
+	            }
+                $criteria->condition = '';
+                $data=Spu::model()->findAll($criteria);
+                for($i=0;$i<sizeof($data); $i++){
+                	$rec[$i][id]=$data[$i]['spu_id'];
+                	$rec[$i][name]=$data[$i]['spu_name'];
+
+               //  $rec[$data[$i]['spu_id']] = $data[$i]['spu_name'];
+                }
+                return $rec;
+	}
+
+
 }
 
 

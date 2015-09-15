@@ -1,0 +1,117 @@
+2015/09/10 17:21:30 [error] [exception.CException] exception 'CException' with message 'Property "BannerController._module" is not defined.' in D:\WWW\yvvy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\controllers\BannerController.php(7): CComponent->__get('_module')
+#1 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): BannerController->actionIndex()
+#2 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\WWW\yvvy\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('')
+#6 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/banner')
+#7 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#8 D:\WWW\yvvy\index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=admin/banner
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/Catalogue
+---
+2015/09/10 17:23:55 [error] [exception.CException] exception 'CException' with message 'Property "BannerController._module" is not defined.' in D:\WWW\yvvy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\controllers\BannerController.php(7): CComponent->__get('_module')
+#1 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): BannerController->actionIndex()
+#2 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\WWW\yvvy\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('')
+#6 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/banner')
+#7 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#8 D:\WWW\yvvy\index.php(15): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=admin/banner
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/Catalogue
+---
+2015/09/15 10:29:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yvvyshop.goods' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Goods`.
+in D:\WWW\yvvy\protected\modules\admin\models\Goods.php (49)
+in D:\WWW\yvvy\protected\modules\admin\views\goods\index.php (88)
+in D:\WWW\yvvy\protected\modules\admin\controllers\GoodsController.php (24)
+in D:\WWW\yvvy\index.php (15)
+2015/09/15 10:29:51 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Goods" for active record class "Goods" cannot be found in the database.' in D:\WWW\yvvy\yii\db\ar\CActiveRecord.php:2385
+Stack trace:
+#0 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Goods))
+#1 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(1355): CActiveRecord->getTableSchema()
+#3 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#4 D:\WWW\yvvy\protected\modules\admin\models\Goods.php(49): CActiveRecord->findAll()
+#5 D:\WWW\yvvy\protected\modules\admin\views\goods\index.php(88): Goods->getId()
+#6 D:\WWW\yvvy\yii\web\CBaseController.php(126): require('D:\WWW\yvvy\pro...')
+#7 D:\WWW\yvvy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\WWW\yvvy\pro...', Array, true)
+#8 D:\WWW\yvvy\yii\web\CController.php(869): CBaseController->renderFile('D:\WWW\yvvy\pro...', Array, true)
+#9 D:\WWW\yvvy\yii\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 D:\WWW\yvvy\protected\modules\admin\controllers\GoodsController.php(24): CController->render('index', Array)
+#11 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): GoodsController->actionIndex()
+#12 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\WWW\yvvy\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('')
+#16 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/goods')
+#17 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#18 D:\WWW\yvvy\index.php(15): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php?r=admin/goods
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/banner/update
+---
+2015/09/15 11:02:53 [error] [exception.CException] exception 'CException' with message 'Property "Goods.banner_group" is not defined.' in D:\WWW\yvvy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(145): CComponent->__get('banner_group')
+#1 D:\WWW\yvvy\protected\modules\admin\views\goods\update.php(83): CActiveRecord->__get('banner_group')
+#2 D:\WWW\yvvy\yii\web\CBaseController.php(126): require('D:\WWW\yvvy\pro...')
+#3 D:\WWW\yvvy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\WWW\yvvy\pro...', Array, true)
+#4 D:\WWW\yvvy\yii\web\CController.php(869): CBaseController->renderFile('D:\WWW\yvvy\pro...', Array, true)
+#5 D:\WWW\yvvy\yii\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 D:\WWW\yvvy\protected\modules\admin\controllers\GoodsController.php(54): CController->render('update', Array)
+#7 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): GoodsController->actionUpdate()
+#8 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\WWW\yvvy\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('update')
+#12 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/goods/upd...')
+#13 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#14 D:\WWW\yvvy\index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=admin/goods/update
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/goods
+---
+2015/09/15 11:21:30 [error] [php] json_decode() expects parameter 1 to be string, array given (D:\WWW\yvvy\protected\modules\admin\controllers\TestController.php:9)
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\WWW\yvvy\yii\web\CController.php(286): TestController->runAction()
+#2 D:\WWW\yvvy\yii\web\CController.php(265): TestController->runActionWithFilters()
+#3 D:\WWW\yvvy\yii\web\CWebApplication.php(282): TestController->run()
+#4 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#6 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=admin/test/index
+in D:\WWW\yvvy\protected\modules\admin\controllers\TestController.php (9)
+in D:\WWW\yvvy\index.php (15)
+2015/09/15 11:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index?keyword=a".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('index?keyword=a')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('index?keyword=a')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/test/inde...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=admin/test/index?keyword=a
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/test/
+---
+2015/09/15 11:45:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index?keyword=a".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('index?keyword=a')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('index?keyword=a')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/test/inde...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=admin/test/index?keyword=a
+---
+2015/09/15 13:44:04 [warning] [application] Failed to set unsafe attribute "classfy_name" of "Goods".
+in D:\WWW\yvvy\protected\modules\admin\controllers\GoodsController.php (39)
+in D:\WWW\yvvy\index.php (15)
