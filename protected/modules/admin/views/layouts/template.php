@@ -331,86 +331,7 @@
 
 						</li>
 
-						<li >
-
-							<a href="page_coming_soon.html">
-
-							<i class="icon-cogs"></i>
-
-							Coming Soon</a>
-
-						</li>
-
-						<li >
-
-							<a href="page_blog.html">
-
-							<i class="icon-comments"></i>
-
-							Blog</a>
-
-						</li>
-
-						<li >
-
-							<a href="page_blog_item.html">
-
-							<i class="icon-font"></i>
-
-							Blog Post</a>
-
-						</li>
-
-						<li >
-
-							<a href="page_news.html">
-
-							<i class="icon-coffee"></i>
-
-							News</a>
-
-						</li>
-
-						<li >
-
-							<a href="page_news_item.html">
-
-							<i class="icon-bell"></i>
-
-							News View</a>
-
-						</li>
-
-						<li >
-
-							<a href="page_about.html">
-
-							<i class="icon-group"></i>
-
-							About Us</a>
-
-						</li>
-
-						<li >
-
-							<a href="page_contact.html">
-
-							<i class="icon-envelope-alt"></i>
-
-							Contact Us</a>
-
-						</li>
-
-						<li >
-
-							<a href="page_calendar.html">
-
-							<i class="icon-calendar"></i>
-
-							Calendar</a>
-
-						</li>
-
+						
 					</ul>
 
 				</li>
@@ -421,7 +342,7 @@
 
 					<i class="icon-gift"></i> 
 
-					<span class="title">Extra</span>
+					<span class="title">前端用户</span>
 
 					<span class="arrow "></span>
 
@@ -429,107 +350,10 @@
 
 					<ul class="sub-menu">
 
+						
 						<li >
 
-							<a href="extra_profile.html">
-
-							User Profile</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_lock.html">
-
-							Lock Screen</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_faq.html">
-
-							FAQ</a>
-
-						</li>
-
-						<li >
-
-							<a href="inbox.html">
-
-							Inbox</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_search.html">
-
-							Search Results</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_invoice.html">
-
-							Invoice</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_pricing_table.html">
-
-							Pricing Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_image_manager.html">
-
-							Image Manager</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_404_option1.html">
-
-							404 Page Option 1</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_404_option2.html">
-
-							404 Page Option 2</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_404_option3.html">
-
-							404 Page Option 3</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_500_option1.html">
-
-							500 Page Option 1</a>
-
-						</li>
-
-						<li >
-
-							<a href="extra_500_option2.html">
-
-							500 Page Option 2</a>
+							<a href="<?php echo Yii::app()->createUrl("admin/customer")?>">用户查看</a>
 
 						</li>
 
@@ -565,9 +389,6 @@
 
 								<li><a href="#">Sample Link 1</a></li>
 
-								<li><a href="#">Sample Link 2</a></li>
-
-								<li><a href="#">Sample Link 3</a></li>
 
 							</ul>
 
@@ -587,23 +408,11 @@
 
 								<li><a href="#">Sample Link 1</a></li>
 
-								<li><a href="#">Sample Link 1</a></li>
-
-								<li><a href="#">Sample Link 1</a></li>
 
 							</ul>
 
 						</li>
 
-						<li>
-
-							<a href="#">
-
-							Item 3
-
-							</a>
-
-						</li>
 
 					</ul>
 
