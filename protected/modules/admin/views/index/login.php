@@ -60,7 +60,7 @@
 
 	<div class="logo">
 
-		<img src="/admin/image/logo-big.png" alt="" /> 
+		<img src="/admin/image/logo.png" width="100" /> 
 
 	</div>
 
@@ -102,7 +102,7 @@
 
 						<i class="icon-lock"></i>
 
-						<?php echo $form->textField($model,'password',array('class'=>'m-wrap placeholder-no-fix','type'=>'"password','placeholder'=>'Password')) ?>
+						<?php echo $form->passwordField($model,'password',array('class'=>'m-wrap placeholder-no-fix','type'=>'"password','placeholder'=>'Password')) ?>
 
 					</div>
 
@@ -114,7 +114,7 @@
 
 				<label class="checkbox">
 
-				<input type="checkbox" name="remember" value="1"/> Remember me
+				<input type="checkbox" name="" id="remember"> Remember me
 
 				</label>
 				

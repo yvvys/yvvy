@@ -16,10 +16,12 @@ class IndexController extends Controller
 	public function actionLogin()
 	{
 		//实例化登录验证类
+
 		$model = new LoginForm() ;
 		//判断
 		if(isset($_POST['LoginForm']))
 		{
+
 			$model->attributes = $_POST['LoginForm'];
 			//登录验证
 			if($model->validate() && $model->login())

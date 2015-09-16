@@ -21,5 +21,45 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-	//public function 
+	public function filterAccessAuth($filterChain) { 
+		   $filterChain->run();  
+		   exit;
+			echo Yii::app()->user->getIsGuest();
+			exit;
+            if(Yii::app()->user->getIsGuest() && !in_array($this->getAction()->getId(), $this->authlessActions())) {  
+               // echo '请登录';
+                //echo Yii::app()->controller->id;//获取控制器
+                //echo $this->getAction()->getId();//获取action
+                echo $this->getModule()->user->loginUrl;
+                 Yii::app()->params['loginUrl'];//登录地址
+                 Yii::app()->params['returnUrl'];//登录跳转页面
+                exit;
+                Yii::app()->user->loginRequired();  //封装了Yii::app()->user->loginUrl  
+            }  
+            
+            
+		/*
+            elseif(!in_array($this->getAction()->getId(), $this->authlessActions()) && $this->current_user && $this->current_user->isPasswordExpired()) {  
+                $this->user->setFlash('error', "你的密码已经过期，超过: " . Yii::app()->params['user_pwd_max_expire_day'] . "天没有修改，请修改密码");  
+                $this->redirect($this->createUrl("/account/profile"));  
+            }  
+              
+            if(!in_array($this->getAction()->getId(), $this->authlessActions()) && $this->current_user && $this->current_user->hi_id == NULL) {  
+                $target_url = $this->createUrl('account/profile');  
+                $this->user->setFlash('info', "你还没有设置Hi，请尽快到" . "<a href=\"$target_url\">  账号设置  </a>" . "添加！");    
+            }  
+      
+            $filterChain->run();  
+            */
+    }  
+      
+    public function filters() {  
+            return array(  
+                'accessAuth',  
+            );  
+    }  
+      
+    public function authlessActions() {  
+            return array();  
+    }  
 }

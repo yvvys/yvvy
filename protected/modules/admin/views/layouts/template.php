@@ -80,7 +80,7 @@
 
 				<a class="brand" href="index.html">
 
-				<img src="/admin/image/logo.png" alt="logo" />
+				<img src="/admin/image/logo.png" width="40" alt="logo" />
 
 				</a>
 
@@ -367,7 +367,7 @@
 
 					<i class="icon-sitemap"></i> 
 
-					<span class="title">3 Level Menu</span>
+					<span class="title">后台管理</span>
 
 					<span class="arrow "></span>
 
@@ -377,39 +377,23 @@
 
 						<li>
 
-							<a href="javascript:;">
-
-							Item 1
-
-							<span class="arrow"></span>
-
-							</a>
-
-							<ul class="sub-menu">
-
-								<li><a href="#">Sample Link 1</a></li>
-
-
-							</ul>
+							<a href="<?php echo Yii::app()->createUrl("admin/usergroup/index")?>">后台帐号</a>
 
 						</li>
 
 						<li>
 
-							<a href="javascript:;">
+							<a href="<?php echo Yii::app()->createUrl("admin/usergroup/index")?>">后台帐号</a>
 
-							Item 1
+						</li>
+						<li>
 
-							<span class="arrow"></span>
+							<a href="<?php echo Yii::app()->createUrl("admin/usergroup/index")?>">后台帐号</a>
 
-							</a>
+						</li>
+						<li>
 
-							<ul class="sub-menu">
-
-								<li><a href="#">Sample Link 1</a></li>
-
-
-							</ul>
+							<a href="<?php echo Yii::app()->createUrl("admin/usergroup/index")?>">后台帐号</a>
 
 						</li>
 

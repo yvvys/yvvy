@@ -37,8 +37,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-			'loginUrl'=>array('admin/index/index'),
-			'returnUrl'=>array('admin/Catalogue'),
+			
 		),
 
 		// uncomment the following to enable URLs in path-format
@@ -85,6 +84,7 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'loginUrl'=>array('admin/index/index'),
+		'returnUrl'=>array('admin/Catalogue'),
 	),
 );
