@@ -14,7 +14,7 @@ function getData(val) {
 		$.ajax({
 			type: "post",
 			async: false, //控制同步
-			url: "<?php echo Yii::app()->createUrl('admin/test/index')?>&keyword="+keyword,
+			url: "<?php echo Yii::app()->createUrl('admin/test/index')?>?keyword="+keyword,
 			data: "param=" + val,
 			dataType: "json",
 			cache: false,
@@ -340,8 +340,8 @@ overflow-y:auto;
 										
 										<?php echo $form->labelEx($model,'image',array('class'=>'control-label')); ?>										
 										<div class="controls">
-											<?php $this->widget('application.widgets.Upload.UploadWidget',array('image'=>$model->image));?>
-											<?php echo CHtml::hiddenField('Goods[image]',$model->image,array('class' => 'span6','id'=>'Banner_pic')); ?>
+											<?php $this->widget('application.widgets.Upload.UploadWidget',array('image'=>$model->image,'type'=>'more'));?>
+											<?php //echo CHtml::hiddenField('Goods[image]',$model->image,array('class' => 'span6','id'=>'Banner_pic')); ?>
 					  							
 										</div>
 

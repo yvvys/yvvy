@@ -34,11 +34,11 @@ class Controller extends CController
 			}else{
 				if(in_array('all',Yii::app()->user->user_group)){
 					$filterChain->run();
-				}else if(in_array(Yii::app()->controller->id,Yii::app()->user->user_group)){
+				}else if(in_array(Yii::app()->controller->id,Yii::app()->user->user_group) || Yii::app()->controller->id=='index'){
 					$filterChain->run();
 				}else{
 					$this->render('/site/showgroup',array('returnUrl'=>Yii::app()->params['returnUrl']));
-					$this->redirect(Yii::app()->params['returnUrl']);  
+				//	$this->redirect(Yii::app()->params['returnUrl']);  
 				}
 			}
 		}

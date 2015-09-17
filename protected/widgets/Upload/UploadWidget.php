@@ -20,8 +20,12 @@ ASSET_URL;
         Yii::app()->clientScript->registerCssFile($assetUrl . '/uploadify.css');
      
           $image=$this->image;
-     
-        $this->render('uploadWidget', array('uploadUrl' => $uploadUrl,'image'=> $image));
+        $type = $this->type;
+        if($type=='more'){
+            $this->render('moreUploadWidget', array('uploadUrl' => $uploadUrl,'image'=> $image));
+        }else{
+         $this->render('uploadWidget', array('uploadUrl' => $uploadUrl,'image'=> $image));
+        }
     }
 }
 

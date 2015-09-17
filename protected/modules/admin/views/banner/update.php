@@ -133,6 +133,18 @@
 										<div class="controls">
 											<?php $this->widget('application.widgets.Upload.UploadWidget',array('image'=>$model->image));?>
 											<?php echo CHtml::hiddenField('Banner[image]',$model->image,array('class' => 'span6','id'=>'Banner_pic')); ?>
+
+												<?php 
+												/*多图调用
+													$image_data=json_encode(array(
+														'/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg',
+														'/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg',
+														'/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg',
+														'/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg'));
+												$this->widget('application.widgets.Upload.UploadWidget',array('image'=>$image_data,'type'=>'more'));
+												*/
+												?>
+								
 											
 																						
 										</div>

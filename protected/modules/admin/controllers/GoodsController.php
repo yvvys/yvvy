@@ -36,6 +36,11 @@ class GoodsController extends Controller
 
 		if(isset($_POST["Goods"]))
 		{
+			if($_POST[moreimage]){
+				$_POST[Goods][image]=json_encode($_POST[moreimage]);
+			}else{
+				$_POST[Goods][image]='';	
+			}
 			$model->attributes = $_POST["Goods"];
 
 			if($model->validate())
