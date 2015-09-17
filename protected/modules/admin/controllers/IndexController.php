@@ -16,7 +16,7 @@ class IndexController extends Controller
 	public function actionLogin()
 	{
 		//实例化登录验证类
-
+		
 		$model = new LoginForm() ;
 		//判断
 		if(isset($_POST['LoginForm']))
@@ -27,7 +27,7 @@ class IndexController extends Controller
 			if($model->validate() && $model->login())
 			{
 
-				$this->redirect(array('index'));
+				$this->redirect(Yii::app()->params['returnUrl']);
 			}
 		}
 		$this->renderPartial('login',array('model'=>$model));

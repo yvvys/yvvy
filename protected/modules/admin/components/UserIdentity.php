@@ -15,6 +15,7 @@ class UserIdentity extends CUserIdentity
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
+	private $user_group = null;
 	public function authenticate()
 	{
 		$user = User::model()->find('username = :name',array(":name"=>$this->username));
@@ -31,11 +32,29 @@ class UserIdentity extends CUserIdentity
 
 		}
 		else{
-
+			$this->user_group=$user[user_group];
 			$this->errorCode=self::ERROR_NONE;
 		
 		}
 		
 		return $this->errorCode;
 	}
+
+
+	public function getPersistentStates()
+    {
+    	$group=json_decode($this->user_group,true);
+    	$model=Usergroup::model()->findall();
+    	foreach($model as $v){
+    		if(in_array($v[group_id],$group)){
+    			$allGroup[$v[group_id]]=$v[controller];	
+    		}
+    	}
+    
+
+        return array(
+            'user_group' => $allGroup,
+ 
+        );
+    }
 }

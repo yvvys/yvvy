@@ -53,7 +53,7 @@ class LoginForm extends CFormModel
 
 			if($this->_identity->authenticate()<>0){
 
-				$this->addError('password','Incorrect username or password.');
+				$this->addError('password','帐号或者密码错误.');
 
 			}
 

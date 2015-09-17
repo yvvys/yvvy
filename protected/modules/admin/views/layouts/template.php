@@ -381,21 +381,6 @@
 
 						</li>
 
-						<li>
-
-							<a href="<?php echo Yii::app()->createUrl("admin/usergroup/index")?>">后台帐号</a>
-
-						</li>
-						<li>
-
-							<a href="<?php echo Yii::app()->createUrl("admin/usergroup/index")?>">后台帐号</a>
-
-						</li>
-						<li>
-
-							<a href="<?php echo Yii::app()->createUrl("admin/usergroup/index")?>">后台帐号</a>
-
-						</li>
 
 
 					</ul>

@@ -22,6 +22,26 @@ class Controller extends CController
 	public $breadcrumbs=array();
 
 	public function filterAccessAuth($filterChain) { 
+	
+
+		if(Yii::app()->controller->id=='index' && $this->getAction()->getId()=='login'){
+			$filterChain->run();
+		}else{
+			if(Yii::app()->user->getIsGuest()){
+				
+				$this->redirect(Yii::app()->params['loginUrl']);  
+			}else{
+				if(in_array('all',Yii::app()->user->user_group)){
+					$filterChain->run();
+				}else if(in_array(Yii::app()->controller->id,Yii::app()->user->user_group)){
+					$filterChain->run();
+				}else{
+					$this->redirect($this->createUrl(Yii::app()->params['returnUrl']));  
+				}
+			}
+		}
+
+		/*
 		   $filterChain->run();  
 		   exit;
 			echo Yii::app()->user->getIsGuest();

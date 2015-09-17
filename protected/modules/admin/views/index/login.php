@@ -105,7 +105,7 @@
 						<?php echo $form->passwordField($model,'password',array('class'=>'m-wrap placeholder-no-fix','type'=>'"password','placeholder'=>'Password')) ?>
 
 					</div>
-
+						<?php echo $form->error($model,'password'); ?>
 				</div>
 
 			</div>
@@ -121,6 +121,7 @@
 				<?php echo CHtml::submitButton('Login',array('class'=>"btn green pull-right",'type'=>'submit')); ?>         
 
 			</div>
+			
 
 		<?php $this->endWidget(); ?>
 

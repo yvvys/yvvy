@@ -674,3 +674,367 @@ Stack trace:
 REQUEST_URI=/index.php?r=admin/usergroup/update&id=1
 HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/usergroup/index&Banner_page=
 ---
+2015/09/16 16:54:35 [error] [exception.CException] exception 'CException' with message 'IndexController and its behaviors do not have a method or closure named "displayMessage".' in D:\WWW\yvvy\yii\base\CComponent.php:266
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\views\index\login.php(124): CComponent->__call('displayMessage', Array)
+#1 D:\WWW\yvvy\protected\modules\admin\views\index\login.php(124): IndexController->displayMessage()
+#2 D:\WWW\yvvy\yii\web\CBaseController.php(126): require('D:\WWW\yvvy\pro...')
+#3 D:\WWW\yvvy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\WWW\yvvy\pro...', Array, true)
+#4 D:\WWW\yvvy\yii\web\CController.php(869): CBaseController->renderFile('D:\WWW\yvvy\pro...', Array, true)
+#5 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(33): CController->renderPartial('login', Array)
+#6 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#7 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#10 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#11 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#13 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#15 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#16 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#17 D:\WWW\yvvy\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=admin/index/login
+---
+2015/09/16 16:57:20 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getErrors".' in D:\WWW\yvvy\yii\base\CComponent.php:266
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\helpers\CHtml.php(2199): CComponent->__call('getErrors', Array)
+#1 D:\WWW\yvvy\yii\web\helpers\CHtml.php(2199): CActiveForm->getErrors()
+#2 D:\WWW\yvvy\yii\web\widgets\CActiveForm.php(550): CHtml::errorSummary(Object(CActiveForm), NULL, NULL, Array)
+#3 D:\WWW\yvvy\protected\modules\admin\views\index\login.php(120): CActiveForm->errorSummary(Object(CActiveForm))
+#4 D:\WWW\yvvy\yii\web\CBaseController.php(126): require('D:\WWW\yvvy\pro...')
+#5 D:\WWW\yvvy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\WWW\yvvy\pro...', Array, true)
+#6 D:\WWW\yvvy\yii\web\CController.php(869): CBaseController->renderFile('D:\WWW\yvvy\pro...', Array, true)
+#7 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(33): CController->renderPartial('login', Array)
+#8 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#9 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#12 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#13 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#15 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#17 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#18 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#19 D:\WWW\yvvy\index.php(15): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=admin/index/login
+---
+2015/09/16 16:57:21 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getErrors".' in D:\WWW\yvvy\yii\base\CComponent.php:266
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\helpers\CHtml.php(2199): CComponent->__call('getErrors', Array)
+#1 D:\WWW\yvvy\yii\web\helpers\CHtml.php(2199): CActiveForm->getErrors()
+#2 D:\WWW\yvvy\yii\web\widgets\CActiveForm.php(550): CHtml::errorSummary(Object(CActiveForm), NULL, NULL, Array)
+#3 D:\WWW\yvvy\protected\modules\admin\views\index\login.php(120): CActiveForm->errorSummary(Object(CActiveForm))
+#4 D:\WWW\yvvy\yii\web\CBaseController.php(126): require('D:\WWW\yvvy\pro...')
+#5 D:\WWW\yvvy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\WWW\yvvy\pro...', Array, true)
+#6 D:\WWW\yvvy\yii\web\CController.php(869): CBaseController->renderFile('D:\WWW\yvvy\pro...', Array, true)
+#7 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(33): CController->renderPartial('login', Array)
+#8 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#9 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#12 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#13 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#15 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#17 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#18 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#19 D:\WWW\yvvy\index.php(15): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=admin/index/login
+---
+2015/09/16 17:02:31 [error] [php] Missing argument 2 for CActiveForm::error(), called in D:\WWW\yvvy\protected\modules\admin\views\index\login.php on line 108 and defined (D:\WWW\yvvy\yii\web\widgets\CActiveForm.php:444)
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CBaseController.php(95): IndexController->renderInternal()
+#1 D:\WWW\yvvy\yii\web\CController.php(869): IndexController->renderFile()
+#2 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(33): IndexController->renderPartial()
+#3 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#4 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): IndexController->runAction()
+#6 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#7 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): IndexController->filterAccessAuth()
+#8 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#10 D:\WWW\yvvy\yii\web\CController.php(265): IndexController->runActionWithFilters()
+#11 D:\WWW\yvvy\yii\web\CWebApplication.php(282): IndexController->run()
+#12 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#14 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=admin/index/login
+in D:\WWW\yvvy\protected\modules\admin\views\index\login.php (108)
+in D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php (33)
+in D:\WWW\yvvy\protected\modules\admin\components\Controller.php (25)
+in D:\WWW\yvvy\index.php (15)
+2015/09/16 17:03:14 [error] [exception.CException] exception 'CException' with message 'IndexController and its behaviors do not have a method or closure named "displayMessage".' in D:\WWW\yvvy\yii\base\CComponent.php:266
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\views\index\login.php(124): CComponent->__call('displayMessage', Array)
+#1 D:\WWW\yvvy\protected\modules\admin\views\index\login.php(124): IndexController->displayMessage()
+#2 D:\WWW\yvvy\yii\web\CBaseController.php(126): require('D:\WWW\yvvy\pro...')
+#3 D:\WWW\yvvy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\WWW\yvvy\pro...', Array, true)
+#4 D:\WWW\yvvy\yii\web\CController.php(869): CBaseController->renderFile('D:\WWW\yvvy\pro...', Array, true)
+#5 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(33): CController->renderPartial('login', Array)
+#6 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#7 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#10 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#11 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#13 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#15 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#16 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#17 D:\WWW\yvvy\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=admin/index/login
+---
+2015/09/16 17:03:18 [error] [exception.CException] exception 'CException' with message 'IndexController and its behaviors do not have a method or closure named "displayMessage".' in D:\WWW\yvvy\yii\base\CComponent.php:266
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\views\index\login.php(124): CComponent->__call('displayMessage', Array)
+#1 D:\WWW\yvvy\protected\modules\admin\views\index\login.php(124): IndexController->displayMessage()
+#2 D:\WWW\yvvy\yii\web\CBaseController.php(126): require('D:\WWW\yvvy\pro...')
+#3 D:\WWW\yvvy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\WWW\yvvy\pro...', Array, true)
+#4 D:\WWW\yvvy\yii\web\CController.php(869): CBaseController->renderFile('D:\WWW\yvvy\pro...', Array, true)
+#5 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(33): CController->renderPartial('login', Array)
+#6 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#7 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#10 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#11 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#13 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#15 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#16 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#17 D:\WWW\yvvy\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=admin/index/login
+---
+2015/09/16 17:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/Catalogue".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/Cat...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=admin/admin/Catalogue
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/index/login
+---
+2015/09/16 17:24:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/Catalogue".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/Cat...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=admin/admin/Catalogue
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/index/login
+---
+2015/09/16 17:25:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/Catalogue/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/Cat...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=admin/admin/Catalogue/index
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/index/login
+---
+2015/09/16 17:31:13 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.user" is not defined.' in D:\WWW\yvvy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\components\UserIdentity.php(44): CComponent->__get('user')
+#1 D:\WWW\yvvy\yii\web\auth\CWebUser.php(230): UserIdentity->getPersistentStates()
+#2 D:\WWW\yvvy\protected\modules\admin\models\LoginForm.php(79): CWebUser->login(Object(UserIdentity), 0)
+#3 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(27): LoginForm->login()
+#4 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#5 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#8 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#9 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#11 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#13 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#14 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\WWW\yvvy\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=admin/index/login
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/index/login
+---
+2015/09/16 17:31:29 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.user_group" is not defined.' in D:\WWW\yvvy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\components\UserIdentity.php(44): CComponent->__get('user_group')
+#1 D:\WWW\yvvy\yii\web\auth\CWebUser.php(230): UserIdentity->getPersistentStates()
+#2 D:\WWW\yvvy\protected\modules\admin\models\LoginForm.php(79): CWebUser->login(Object(UserIdentity), 0)
+#3 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(27): LoginForm->login()
+#4 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#5 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#8 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#9 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#11 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#13 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#14 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\WWW\yvvy\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=admin/index/login
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/index/login
+---
+2015/09/16 17:32:17 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.user_group" is not defined.' in D:\WWW\yvvy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\components\UserIdentity.php(48): CComponent->__get('user_group')
+#1 D:\WWW\yvvy\yii\web\auth\CWebUser.php(230): UserIdentity->getPersistentStates()
+#2 D:\WWW\yvvy\protected\modules\admin\models\LoginForm.php(79): CWebUser->login(Object(UserIdentity), 0)
+#3 D:\WWW\yvvy\protected\modules\admin\controllers\IndexController.php(27): LoginForm->login()
+#4 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): IndexController->actionLogin()
+#5 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(25): CFilterChain->run()
+#8 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#9 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#11 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#13 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#14 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\WWW\yvvy\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=admin/index/login
+HTTP_REFERER=http://yvvy.mom.com/index.php?r=admin/index/login
+---
+2015/09/16 17:58:31 [error] [php] strpos() expects parameter 1 to be string, array given (D:\WWW\yvvy\yii\web\CController.php:963)
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): CatalogueController->filterAccessAuth()
+#1 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#2 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#3 D:\WWW\yvvy\yii\web\CController.php(265): CatalogueController->runActionWithFilters()
+#4 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CatalogueController->run()
+#5 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#7 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=admin/Catalogue/index
+in D:\WWW\yvvy\protected\modules\admin\components\Controller.php (26)
+in D:\WWW\yvvy\index.php (15)
+2015/09/16 18:00:48 [error] [php] strpos() expects parameter 1 to be string, array given (D:\WWW\yvvy\yii\web\CController.php:963)
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): CatalogueController->filterAccessAuth()
+#1 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#2 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#3 D:\WWW\yvvy\yii\web\CController.php(265): CatalogueController->runActionWithFilters()
+#4 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CatalogueController->run()
+#5 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#6 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#7 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/index.php?r=admin/Catalogue/index
+in D:\WWW\yvvy\protected\modules\admin\components\Controller.php (26)
+in D:\WWW\yvvy\index.php (15)
+2015/09/17 10:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index/login
+---
+2015/09/17 10:51:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "myadmin/default/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('myadmin/default...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/myadmin/default/index
+---
+2015/09/17 10:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "myadmin/Default/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('myadmin/Default...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/myadmin/Default/index.html
+---
+2015/09/17 10:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/index/login
+---
+2015/09/17 10:58:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/index/login
+---
+2015/09/17 10:58:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/index/login
+---
+2015/09/17 11:47:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/index/login
+---
+2015/09/17 11:48:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/log...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/index/login
+---
+2015/09/17 11:52:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/default".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/default')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/default/
+---
+2015/09/17 11:52:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/Default".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/Default')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/Default/
+---
+2015/09/17 12:01:37 [error] [php] is_array() expects exactly 1 parameter, 2 given (D:\WWW\yvvy\protected\modules\admin\components\Controller.php:33)
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#2 D:\WWW\yvvy\yii\web\CController.php(265): CatalogueController->runActionWithFilters()
+#3 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CatalogueController->run()
+#4 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#6 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/admin/catalogue/index
+in D:\WWW\yvvy\protected\modules\admin\components\Controller.php (33)
+in D:\WWW\yvvy\index.php (15)
+2015/09/17 12:02:49 [error] [php] is_array() expects exactly 1 parameter, 2 given (D:\WWW\yvvy\protected\modules\admin\components\Controller.php:25)
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#2 D:\WWW\yvvy\yii\web\CController.php(265): CatalogueController->runActionWithFilters()
+#3 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CatalogueController->run()
+#4 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#6 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/admin/catalogue/index
+in D:\WWW\yvvy\protected\modules\admin\components\Controller.php (25)
+in D:\WWW\yvvy\index.php (15)
