@@ -91,6 +91,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'loginUrl'=>'/admin/index/login',
-		'returnUrl'=>'/admin/catalogue/index',
+		'returnUrl'=>'/admin/index/index',
 	),
 );

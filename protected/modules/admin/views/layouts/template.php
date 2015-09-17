@@ -118,7 +118,7 @@
 
 						<ul class="dropdown-menu">
 
-							<li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+							<li><a href="<?php echo Yii::app()->createUrl('admin/index/logout')?>"><i class="icon-key"></i> Log Out</a></li>
 
 						</ul>
 

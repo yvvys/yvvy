@@ -1770,3 +1770,552 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/admin/js/jquery-1.10.1.min.map
 ---
+2015/09/17 15:03:56 [error] [exception.CException] exception 'CException' with message 'IndexController cannot find the requested view "site/showgroup".' in D:\WWW\yvvy\yii\web\CController.php:878
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(782): CController->renderPartial('site/showgroup', NULL, true)
+#1 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(27): CController->render('site/showgroup')
+#2 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#3 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#4 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#5 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('index')
+#7 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/ind...')
+#8 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#9 D:\WWW\yvvy\index.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/admin/index/index
+---
+2015/09/17 15:07:10 [error] [exception.CException] exception 'CException' with message 'NewsController cannot find the requested view "site/showgroup".' in D:\WWW\yvvy\yii\web\CController.php:878
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(782): CController->renderPartial('site/showgroup', Array, true)
+#1 D:\WWW\yvvy\protected\modules\admin\controllers\NewsController.php(22): CController->render('site/showgroup', Array)
+#2 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): NewsController->actionIndex()
+#3 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(36): CFilterChain->run()
+#6 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#7 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#9 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('index')
+#11 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/inde...')
+#12 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#13 D:\WWW\yvvy\index.php(15): CApplication->run()
+#14 {main}
+REQUEST_URI=/admin/news/index
+---
+2015/09/17 15:10:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:10:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:12:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:13:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:13:35 [error] [php] Cannot modify header information - headers already sent by (output started at D:\WWW\yvvy\yii\web\CController.php:793) (D:\WWW\yvvy\yii\web\CHttpRequest.php:860)
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(41): UsergroupController->redirect()
+#1 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): UsergroupController->filterAccessAuth()
+#2 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#4 D:\WWW\yvvy\yii\web\CController.php(265): UsergroupController->runActionWithFilters()
+#5 D:\WWW\yvvy\yii\web\CWebApplication.php(282): UsergroupController->run()
+#6 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#8 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/admin/usergroup/index.html
+in D:\WWW\yvvy\protected\modules\admin\components\Controller.php (41)
+in D:\WWW\yvvy\index.php (15)
+2015/09/17 15:14:23 [error] [php] Cannot modify header information - headers already sent by (output started at D:\WWW\yvvy\yii\web\CController.php:793) (D:\WWW\yvvy\yii\web\CHttpRequest.php:860)
+Stack trace:
+#0 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(41): UsergroupController->redirect()
+#1 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): UsergroupController->filterAccessAuth()
+#2 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#4 D:\WWW\yvvy\yii\web\CController.php(265): UsergroupController->runActionWithFilters()
+#5 D:\WWW\yvvy\yii\web\CWebApplication.php(282): UsergroupController->run()
+#6 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#8 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/admin/usergroup/index.html
+in D:\WWW\yvvy\protected\modules\admin\components\Controller.php (41)
+in D:\WWW\yvvy\index.php (15)
+2015/09/17 15:14:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/login.html
+---
+2015/09/17 15:15:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:15:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:15:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:15:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:15:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:15:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:15:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:16:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:18:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:18:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:21:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:21:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:21:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:21:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:22:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:23:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:23:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('login')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('login')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/news/logi...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/news/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:23:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:23:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:25:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:26:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:26:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:26:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:26:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:26:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:26:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:27:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:27:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:27:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/ind...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/index/login.html
+HTTP_REFERER=http://yvvy.mom.com/admin/news/index
+---
+2015/09/17 15:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index/login
+---
+2015/09/17 15:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index/login
+---
+2015/09/17 15:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index/login
+---
+2015/09/17 15:28:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index/login
+---
+2015/09/17 15:28:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index/login
+---
+2015/09/17 15:28:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/login".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/index/login
+---
+2015/09/17 15:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('admin')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('admin')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/adm...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/index/admin/index/login
+---
+2015/09/17 15:29:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('admin')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('admin')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/index/adm...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/index/admin/index/login
+---
+2015/09/17 15:29:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:29:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:29:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:29:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:29:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:30:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/uploadify-cancel.png".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('assets/img/uplo...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/img/uploadify-cancel.png
+HTTP_REFERER=http://yvvy.mom.com/assets/951256e8/uploadify.css
+---
+2015/09/17 15:30:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:33:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:33:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/uploadify-cancel.png".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('assets/img/uplo...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/img/uploadify-cancel.png
+HTTP_REFERER=http://yvvy.mom.com/assets/951256e8/uploadify.css
+---
+2015/09/17 15:36:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/17 15:36:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/uploadify-cancel.png".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('assets/img/uplo...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/img/uploadify-cancel.png
+HTTP_REFERER=http://yvvy.mom.com/assets/951256e8/uploadify.css
+---

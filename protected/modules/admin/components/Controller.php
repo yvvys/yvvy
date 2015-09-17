@@ -25,7 +25,7 @@ class Controller extends CController
 	public function filterAccessAuth($filterChain) { 
 	
 
-		if(Yii::app()->controller->id=='index' && $this->getAction()->getId()=='login'){
+		if((Yii::app()->controller->id=='index' && $this->getAction()->getId()=='login') || (Yii::app()->controller->id=='resource')){
 			$filterChain->run();
 		}else{
 			if(Yii::app()->user->getIsGuest()){
@@ -37,8 +37,8 @@ class Controller extends CController
 				}else if(in_array(Yii::app()->controller->id,Yii::app()->user->user_group)){
 					$filterChain->run();
 				}else{
-
-					$this->redirect($this->createUrl(Yii::app()->params['returnUrl']));  
+					$this->render('/site/showgroup',array('returnUrl'=>Yii::app()->params['returnUrl']));
+					$this->redirect(Yii::app()->params['returnUrl']);  
 				}
 			}
 		}
