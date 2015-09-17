@@ -43,9 +43,11 @@ class UsergroupController extends Controller{
 				$model = new User;
 			}
 			$model->username 			=	$_POST['Usergroup']['username'];
-			$model->password 			=	count($_POST['Usergroup']['password'])>0 ? md5($_POST['Usergroup']['password']) : $_POST['Usergroup']['passwords'];
+			if($_POST['Usergroup']['password'] <> $_POST['Usergroup']['passwords'] && $id>0){
+				$model->password 			=	md5($_POST['Usergroup']['password']);
+			}
 			$model->user_group 			=	json_encode($_POST['Usergroup']['group']);
-		
+			
 			if($model->save()){
 				$this->redirect($this->createUrl('usergroup/index',array('Banner_page'=>$_GET['Banner_page'])));
 			}else{

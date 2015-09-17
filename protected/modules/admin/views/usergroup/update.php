@@ -92,7 +92,7 @@
 										<label for="Catalogue_name" class="control-label required">密码 <span class="required">*</span>
 										</label>										
 										<div class="controls">
-											<?php echo CHtml::PasswordField('Usergroup[password]','',array('must' => 'yes','class' => 'span6'))?>
+											<?php echo CHtml::PasswordField('Usergroup[password]',$model->password,array('must' => 'yes','class' => 'span6'))?>
 												<?php echo CHtml::hiddenField('Usergroup[passwords]',$model->password,array('must' => 'yes','class' => 'span6'))?>
 																			
 										</div>

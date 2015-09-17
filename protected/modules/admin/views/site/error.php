@@ -1,0 +1,1 @@
+<img src="/admin/image/group.png" />

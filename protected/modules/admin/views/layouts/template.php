@@ -90,7 +90,7 @@
 
 				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 
-				<img src="/admin/image/menu-toggler.png" alt="" />
+				<img src="/admin/image/menu-toggler.png"  />
 
 				</a>          
 
@@ -108,9 +108,9 @@
 
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-						<img alt="" src="/admin/image/avatar1_small.jpg" />
+						<img  src="/admin/image/face.png" width="40" />
 
-						<span class="username">Bob Nilson</span>
+						<span class="username"><?php echo Yii::app()->user->name?></span>
 
 						<i class="icon-angle-down"></i>
 
@@ -162,27 +162,7 @@
 
 				</li>
 
-				<li>
-
-					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-
-					<form class="sidebar-search">
-
-						<div class="input-box">
-
-							<a href="javascript:;" class="remove"></a>
-
-							<input type="text" placeholder="Search..." />
-
-							<input type="button" class="submit" value=" " />
-
-						</div>
-
-					</form>
-
-					<!-- END RESPONSIVE QUICK SEARCH FORM -->
-
-				</li>
+				
 
 				<li class="start ">
 
@@ -717,7 +697,7 @@
 
 		<div class="footer-inner">
 
-			 &copy; Metronic by keenthemes.
+			 Copyright &copy; 2015 YvvY
 
 		</div>
 

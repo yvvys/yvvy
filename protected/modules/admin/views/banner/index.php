@@ -127,7 +127,7 @@
 											?>	
 										<tr class="">
 
-											<td class="center"><a href="<?php echo Yii::app()->createUrl('admin/banner',array('banner_id'=>$v['banner_id']))?>"><?php echo $v['title']?></a></td>
+											<td class="center"><?php echo $v['title']?></td>
 
 											<td class="center"><?php echo $v['banner_group']?></td>
 

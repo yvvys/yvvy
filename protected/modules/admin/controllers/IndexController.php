@@ -9,6 +9,7 @@ class IndexController extends Controller
 		{
 			$this->redirect(array('login'));
 		}else{
+
 			$this->render('index');
 		}
 	}
@@ -35,7 +36,7 @@ class IndexController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(array('login'));
+		$this->redirect(array('/index/login'));
 	}
 }
 
