@@ -32,7 +32,7 @@
 
 							</li>
 
-							<li><a href="#">商品目录维护</a></li>
+							<li><a href="<?php echo Yii::app()->createUrl('admin/catalogue/index')?>">商品目录维护</a></li>
 
 						</ul>
 
@@ -84,23 +84,11 @@
 
 									<div class="control-group">
 
-										<?php echo $form->label($model,'describe',array('class'=>'control-label'));?>
-
-										<div class="controls">
-
-											<?php echo $form->textArea($model,'describe',array('class'=>'span6 ','row'=>'3','value'=>$data['describe']));?>
-
-										</div>
-
-									</div>
-
-									<div class="control-group">
-
 										<?php echo $form->labelEx($model,'parent_id',array('class'=>'control-label '));?>
 
 										<div class="controls">
 
-											<?php echo $form->dropDownList($model,'parent_id',$select,array('class'=>'span6','prompt'=>'-----顶级分类-----',
+											<?php echo $form->dropDownList($model,'parent_id',$select,array('class'=>'span6','prompt'=>'-----请选择-----',
 'options'=>array($data['parent_id']=>array('selected'=>true))));?>
 
 										</div>
@@ -138,7 +126,7 @@
 
 										<button type="submit" class="btn blue">保存</button>
 
-										<button type="button" class="btn">取消</button>                            
+										<a href='<?php echo Yii::app()->createUrl('admin/catalogue')?>'><button type="button" class="btn">取消</button></a>                         
 
 									</div>
 									

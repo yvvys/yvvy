@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.7
+-- version phpStudy 2014
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2015 年 09 月 17 日 16:09
--- 服务器版本: 5.5.17
--- PHP 版本: 5.3.8
+-- 生成日期: 2015 年 09 月 18 日 17:42
+-- 服务器版本: 5.5.40
+-- PHP 版本: 5.3.29
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,24 +23,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user`
+-- 表的结构 `series`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(36) NOT NULL,
-  `password` varchar(64) NOT NULL,
-  `user_group` varchar(500) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+CREATE TABLE IF NOT EXISTS `series` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL,
+  `parent_id` varchar(255) NOT NULL,
+  `parent_name` varchar(50) NOT NULL COMMENT '所属目录',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='产品系列表' AUTO_INCREMENT=8 ;
 
 --
--- 转存表中的数据 `user`
+-- 转存表中的数据 `series`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `user_group`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '["1"]'),
-(3, '龙娃也', '21232f297a57a5a743894a0e4a801fc3', '["2","3","4"]');
+INSERT INTO `series` (`id`, `name`, `parent_id`, `parent_name`) VALUES
+(7, '青少年3', '11', '桌面摆饰>动物图腾');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

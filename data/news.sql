@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.7
+-- version phpStudy 2014
 -- http://www.phpmyadmin.net
 --
--- Ö÷»ú: localhost
--- Éú³ÉÈÕÆÚ: 2015 Äê 09 ÔÂ 10 ÈÕ 15:23
--- ·þÎñÆ÷°æ±¾: 5.5.17
--- PHP °æ±¾: 5.3.8
+-- ä¸»æœº: localhost
+-- ç”Ÿæˆæ—¥æœŸ: 2015 å¹´ 09 æœˆ 18 æ—¥ 17:42
+-- æœåŠ¡å™¨ç‰ˆæœ¬: 5.5.40
+-- PHP ç‰ˆæœ¬: 5.3.29
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Êý¾Ý¿â: `yvvyshop`
+-- æ•°æ®åº“: `yvvyshop`
 --
 
 -- --------------------------------------------------------
 
 --
--- ±íµÄ½á¹¹ `news`
+-- è¡¨çš„ç»“æž„ `news`
 --
 
 CREATE TABLE IF NOT EXISTS `news` (
@@ -34,16 +34,14 @@ CREATE TABLE IF NOT EXISTS `news` (
   `updated` int(11) NOT NULL,
   `issuer` varchar(32) NOT NULL,
   PRIMARY KEY (`news_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- ×ª´æ±íÖÐµÄÊý¾Ý `news`
+-- è½¬å­˜è¡¨ä¸­çš„æ•°æ® `news`
 --
 
 INSERT INTO `news` (`news_id`, `title`, `content`, `created`, `updated`, `issuer`) VALUES
-(1, 'xxxxx', 'xxxxxxxx', 123, 456, '123'),
-(3, 'qwwq', '<p>Ç§ÍòÇ§ÍòÅ¶</p>', 1441863457, 1441863457, 'Â·ÈË¼×'),
-(4, '°¢ÈøÈö°¡', '<p>Èö°¡È÷È÷</p>', 1441863465, 1441863465, 'Â·ÈË¼×');
+(5, 'æµ‹è¯•222', '<p><img src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704074681.jpg" _src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704074681.jpg" style=""/></p><p><img src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704117657.jpg" _src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704117657.jpg" style=""/></p><p><img src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704144426.jpg" _src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704144426.jpg" style=""/></p><p><br/></p>', 1441870431, 1441870431, 'admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

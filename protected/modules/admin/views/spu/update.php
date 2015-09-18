@@ -32,7 +32,7 @@
 
 							</li>
 
-							<li><a href="#">SPU管理</a></li>
+							<li><a href="<?php echo Yii::app()->createUrl('admin/spu/index')?>">SPU管理</a></li>
 
 						</ul>
 
@@ -56,7 +56,7 @@
 
 							<div class="portlet-title">
 
-								<div class="caption"><i class="icon-edit"></i>SPU编辑</div>
+								<div class="caption"><i class="icon-edit"></i>创建新目录</div>
 
 							</div>
 
@@ -71,18 +71,21 @@
 										
 										<?php echo $form->labelEx($model,'spu_id',array('class'=>'control-label')); ?>
 										<div class="controls">
-										
-											<h4 class="span6 m-wrap" name="Spu[spu_id]" type="text"> <?php echo $data['spu_id']?> </h4>
-										
+											
+											<?php echo $form->textField($model,'spu_id',array('class'=>'span6 '));?> 
+											<?php echo $form->error($model,'spu_id');?>
+											
 										</div>
 
 									</div>							
 								
 									<div class="control-group">
 
+										
 										<?php echo $form->labelEx($model,'spu_name',array('class'=>'control-label')); ?>
 										<div class="controls">
-											<?php echo $form->textField($model,'spu_name',array('class'=>'span6','value'=>$data['spu_name']));?> 
+											
+											<?php echo $form->textField($model,'spu_name',array('class'=>'span6 '));?> 
 											<?php echo $form->error($model,'spu_name');?>
 											
 										</div>
@@ -91,11 +94,12 @@
 
 									<div class="control-group">
 
-										<?php echo $form->label($model,'describe',array('class'=>'control-label'));?>
+										<?php echo $form->labelEx($model,'series_id',array('class'=>'control-label '));?>
 
 										<div class="controls">
 
-											<?php echo $form->textArea($model,'describe',array('class'=>'span6 ','value'=>$data['describe'],'row'=>'3'));?>
+											<?php echo $form->dropDownList($model,'series_id',Series::model()->getALL(),array('class'=>'span6','prompt'=>'-----请选择-----','options'=>array($model->series_id=>array('selected'=>true))));?>
+											<?php echo $form->error($model,'series_id');?>
 
 										</div>
 
@@ -106,7 +110,8 @@
 
 										<div class="controls">
 
-											<?php echo $form->dropDownList($model,'classfy_id',$select,array('class'=>'span6','prompt'=>'-----顶级分类-----','options'=>array($data['classfy_id']=>array('selected'=>true))));?>
+											<?php echo $form->dropDownList($model,'classfy_id',Catalogue::model()->getALL(),array('class'=>'span6','prompt'=>'-----请选择-----','options'=>array($model->classfy_id=>array('selected'=>true))));?>
+											<?php echo $form->error($model,'classfy_id');?>
 
 										</div>
 
@@ -118,10 +123,9 @@
 
 										<div class="controls">
 
-
 											<label class="radio">
 
-											<input type="radio" name="Spu[is_sale]" <?php  if($data['is_sale'] == 1 ){ echo 'checked';}?> value="1" />
+											<input type="radio" name="Spu[is_sale]" value="1" checked/>
 
 											是
 
@@ -129,11 +133,12 @@
 
 											<label class="radio">
 
-											<input type="radio" name="Spu[is_sale]" <?php  if($data['is_sale'] == 0 ){ echo 'checked';}?> value="0" />
+											<input type="radio" name="Spu[is_sale]" value="0"  />
 
 											否
 
 											</label> 
+										</div>
 
 									</div>
 

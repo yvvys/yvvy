@@ -32,7 +32,7 @@
 
 							</li>
 
-							<li><a href="#">SPU管理</a></li>
+							<li><a href="<?php echo Yii::app()->createUrl('admin/catalogue/index')?>">商品目录维护</a></li>
 
 						</ul>
 
@@ -85,23 +85,11 @@
 
 									<div class="control-group">
 
-										<?php echo $form->label($model,'describe',array('class'=>'control-label'));?>
-
-										<div class="controls">
-
-											<?php echo $form->textArea($model,'describe',array('class'=>'span6 ','row'=>'3'));?>
-
-										</div>
-
-									</div>
-
-									<div class="control-group">
-
 										<?php echo $form->labelEx($model,'parent_id',array('class'=>'control-label '));?>
 
 										<div class="controls">
 
-											<?php echo $form->dropDownList($model,'parent_id',$data,array('class'=>'span6','prompt'=>'-----顶级分类-----','options'=>array($id=>array('selected'=>true))));?>
+											<?php echo $form->dropDownList($model,'parent_id',$data,array('class'=>'span6','prompt'=>'-----请选择-----','options'=>array(Yii::app()->request->getParam('id')=>array('selected'=>true))));?>
 											
 											<?php echo $form->error($model,'parent_id');?>
 
@@ -116,7 +104,7 @@
 
 											<label class="radio">
 
-											<input type="radio" name="Goods[is_top]" value="1"  />
+											<input type="radio" name="Catalogue[show]" value="1" checked />
 
 											是
 
@@ -124,7 +112,7 @@
 
 											<label class="radio">
 
-											<input type="radio" name="Goods[is_top]" value="0" checked />
+											<input type="radio" name="Catalogue[show]" value="0"  />
 
 											否
 
@@ -137,7 +125,7 @@
 
 										<button type="submit" class="btn blue">保存</button>
 
-										<button type="button" class="btn">取消</button>                            
+										<a href='<?php echo Yii::app()->createUrl('admin/catalogue')?>'><button type="button" class="btn">取消</button></a>                            
 
 									</div>
 								<?php $this->endWidget(); ?>	

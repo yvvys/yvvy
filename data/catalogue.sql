@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2015 年 09 月 07 日 12:09
--- 服务器版本: 5.5.38
--- PHP 版本: 5.4.33
+-- 生成日期: 2015 年 09 月 18 日 17:41
+-- 服务器版本: 5.5.40
+-- PHP 版本: 5.3.29
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -34,21 +34,26 @@ CREATE TABLE IF NOT EXISTS `catalogue` (
   `status` int(4) NOT NULL DEFAULT '1',
   `level` int(4) NOT NULL,
   `tree` varchar(255) NOT NULL,
-  `describe` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品分类目录表' AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品分类目录表' AUTO_INCREMENT=15 ;
 
 --
 -- 转存表中的数据 `catalogue`
 --
 
-INSERT INTO `catalogue` (`id`, `name`, `parent_id`, `show`, `status`, `level`, `tree`, `describe`) VALUES
-(26, '餐厅', 0, 0, 1, 1, '餐厅', '餐厅'),
-(27, '餐桌', 26, 0, 1, 2, '餐厅>餐桌', '餐桌'),
-(28, '客厅', 0, 0, 1, 1, '客厅', '客厅'),
-(29, '床头柜', 28, 0, 1, 2, '客厅>床头柜', '客厅--床头柜'),
-(30, '卧室', 0, 0, 1, 1, '卧室', '卧室');
+INSERT INTO `catalogue` (`id`, `name`, `parent_id`, `show`, `status`, `level`, `tree`) VALUES
+(4, '潮酷家具', 0, 1, 1, 1, '潮酷家具'),
+(5, '桌面摆饰', 0, 1, 1, 1, '桌面摆饰'),
+(6, '个性抱枕', 0, 1, 1, 1, '个性抱枕'),
+(7, '装饰植物', 0, 1, 1, 1, '装饰植物'),
+(8, '艺术玻璃', 5, 1, 1, 2, '桌面摆饰>艺术玻璃'),
+(9, '奢华陶瓷', 5, 1, 1, 2, '桌面摆饰>奢华陶瓷'),
+(10, '手工皮革', 5, 1, 1, 2, '桌面摆饰>手工皮革'),
+(11, '动物图腾', 5, 1, 1, 2, '桌面摆饰>动物图腾'),
+(12, '装饰画', 7, 1, 1, 2, '装饰植物>装饰画'),
+(13, '植物', 7, 1, 1, 2, '装饰植物>植物'),
+(14, '生活配饰', 7, 1, 1, 2, '装饰植物>生活配饰');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

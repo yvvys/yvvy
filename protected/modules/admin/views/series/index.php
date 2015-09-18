@@ -32,7 +32,7 @@
 
 							</li>
 
-							<li><a href="<?php echo Yii::app()->createUrl('admin/catalogue/index')?>">商品目录维护</a></li>
+							<li><a href="<?php echo Yii::app()->createUrl('admin/series/index')?>">商品系列</a></li>
 
 						</ul>
 
@@ -57,7 +57,7 @@
 							<div class="portlet-title">
 
 								<div class="caption"><i class="icon-edit"></i>
-								商品目录 
+								商品系列 
 								<?php if(Yii::app()->user->hasFlash('Info')){ 
 										echo Yii::app()->user->getFlash('Info');
 									};?>
@@ -71,9 +71,9 @@
 
 									<div class="btn-group">
 
-										<a href='<?php echo Yii::app()->createUrl('admin/catalogue/create')?>'><button id="sample_editable_1_new" class="btn green">
+										<a href='<?php echo Yii::app()->createUrl('admin/series/update')?>'><button id="sample_editable_1_new" class="btn green">
 
-										创建新的目录 <i class="icon-plus"></i></button></a>
+										创建新的系列 <i class="icon-plus"></i></button></a>
 
 										</button>
 
@@ -87,15 +87,11 @@
 
 										<tr>
 
-											<th>名字</th>
+											<th>系列名</th>
 
-											<th>子目录个数</th>
+											<th>所属目录</th>
 
-											<th>编辑子目录</th>
-
-											<th>添加子目录</th>
-
-											<th>编辑目录</th>
+											<th>编辑系列</th>
 
 											<th>删除</th>
 
@@ -104,20 +100,16 @@
 									</thead>
 
 									<tbody>
-										<?php foreach($data as $v){ ?>	
+										<?php foreach($data->getData() as $v){ ?>	
 										<tr class="">
 
 											<td class="center"><a href="#"><?php echo $v['name']?></a></td>
 
-											<td class="center"><?php echo $v['num']?></td>
+											<td class="center"><?php echo $v['parent_name']?></td>
 
-											<td><a class="edit"><a href="<?php echo Yii::app()->createUrl('admin/catalogue/index',array('id'=>$v['id']))?>">编辑子目录</a></td>
+											<td><a class="edit"><a href="<?php echo Yii::app()->createUrl('admin/series/update',array('id'=>$v['id']))?>">编辑</a></td>
 
-											<td><a class="add"><a href="<?php echo Yii::app()->createUrl('admin/catalogue/create',array('id'=>$v['id']))?>">添加子目录</a></td>
-
-											<td><a class="edit"><a href="<?php echo Yii::app()->createUrl('admin/catalogue/update',array('id'=>$v['id']))?>">编辑</a></td>
-
-											<td><a class="delete"><a href="<?php echo Yii::app()->createUrl('admin/catalogue/delete',array('id'=>$v['id']))?>">删除</a></td>
+											<td><a class="delete"><a href="<?php echo Yii::app()->createUrl('admin/series/delete',array('id'=>$v['id']))?>">删除</a></td>
 
 										</tr>
 										<?php }?>

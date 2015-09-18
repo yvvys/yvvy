@@ -10,8 +10,32 @@ class IndexController extends Controller
 			$this->redirect(array('login'));
 		}else{
 
-			$this->render('index');
+			$model = User::model();
+			if(isset($_POST['User']))
+			{
+				$user = $model->findByPk(Yii::app()->user->user_id);
+				$_POST['User']['id'] = $user->id;
+				$_POST['User']['username'] = $user->username;
+				$_POST['User']['user_group'] = $user->user_group;	
+
+				$model->attributes = $_POST['User'];
+
+				if($model->validate()){
+					//重新赋值
+					$_POST['User']['password'] = md5($_POST['User']['password1']);
+					$model->attributes = $_POST['User'];
+					if($model->save())
+					{
+						$this->redirect(array('catalogue/index'));
+					}
+				}
+			}
+
+			$this->render('index',array('model'=>$model));
 		}
+
+
+
 	}
 	//验证登录
 	public function actionLogin()

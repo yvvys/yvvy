@@ -17,7 +17,6 @@ class Catalogue extends CActiveRecord
   {
       return array(
         'name'      => '名称',
-        'describe'  => '描述',
         'parent_id' => '分类',
         'show'      => '前台显示',
         );
@@ -27,7 +26,6 @@ class Catalogue extends CActiveRecord
       return array(
         array('name','required','message'=>'名称必填'),
         array('parent_id','required','message'=>'分类必选'),
-        array('describe','safe',),
         array('level','safe',),
         array('tree','safe',),
         );
@@ -53,7 +51,7 @@ class Catalogue extends CActiveRecord
     $son = $this::model()->findAll('parent_id=:id',array(':id'=>$id));
     foreach($son as $v){
       $num = $this::model()->count('parent_id=:id',array(':id'=>$v['id']));
-      array_push($result,array('id'=>$v['id'],'name'=>$v['name'],'describe'=>$v['describe'],'num'=>$num));
+      array_push($result,array('id'=>$v['id'],'name'=>$v['name'],'num'=>$num));
     }
     return $result;
   }

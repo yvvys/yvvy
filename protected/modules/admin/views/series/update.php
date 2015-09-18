@@ -8,7 +8,7 @@
 
 						<h3 class="page-title">
 
-							商品管理 <small>商品目录维护</small>
+							SPU管理<small>&nbsp;&nbsp;&nbsp;&nbsp;SPU添加</small>
 
 						</h3>
 
@@ -32,7 +32,7 @@
 
 							</li>
 
-							<li><a href="#">商品目录维护</a></li>
+							<li><a href="#">SPU管理</a></li>
 
 						</ul>
 
@@ -62,74 +62,31 @@
 
 							<div class="portlet-body">
 
-								<div class="portlet-body form">
+								<?php $form=$this->beginWidget('CActiveForm'); ?>
+								<div class="portlet-body form form-horizontal">
 
 								<!-- BEGIN FORM-->
-
-								<form action="#" class="form-horizontal">
-
 									<div class="control-group">
 
-										<label class="control-label">名字</label>
-
+										
+										<?php echo $form->labelEx($model,'name',array('class'=>'control-label')); ?>
 										<div class="controls">
-
-											<input type="text" class="span6 m-wrap" />
-
+											
+											<?php echo $form->textField($model,'name',array('class'=>'span6 '));?> 
+											<?php echo $form->error($model,'name');?>
+											
 										</div>
 
-									</div>
-
+									</div>							
+								
 									<div class="control-group">
 
-										<label class="control-label">描述</label>
+										<?php echo $form->labelEx($model,'parent_id',array('class'=>'control-label '));?>
 
 										<div class="controls">
 
-											<textarea class="span6 m-wrap" rows="3"></textarea>
-
-										</div>
-
-									</div>
-
-									<div class="control-group">
-
-										<label class="control-label">位置</label>
-
-										<div class="controls">
-
-											<select class="span6 m-wrap" data-placeholder="Choose a Category" tabindex="1">
-
-												<option value="">Select...</option>
-
-												<option value="Category 1">Category 1</option>
-
-											</select>
-
-										</div>
-
-									</div>
-									<div class="control-group">
-
-										<label class="control-label">前台显示</label>
-
-										<div class="controls">
-
-											<label class="radio">
-
-											<input type="radio" name="optionsRadios1" value="option1" />
-
-											是
-
-											</label>
-
-											<label class="radio">
-
-											<input type="radio" name="optionsRadios1" value="option2" checked />
-
-											否
-
-											</label>  
+											<?php echo $form->dropDownList($model,'parent_id',Catalogue::model()->getALL(),array('class'=>'span6','prompt'=>'-----请选择-----','options'=>array($model->parent_id=>array('selected'=>true))));?>
+											<?php echo $form->error($model,'parent_id');?>
 
 										</div>
 
@@ -139,10 +96,10 @@
 
 										<button type="submit" class="btn blue">保存</button>
 
-										<button type="button" class="btn">取消</button>                            
+										<a href='<?php echo Yii::app()->createUrl('admin/series')?>'><button type="button" class="btn">取消</button></a>                            
 
 									</div>
-
+								<?php $this->endWidget(); ?>	
 							</div>
 
 						</div>

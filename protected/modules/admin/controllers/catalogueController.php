@@ -3,8 +3,9 @@ header("Content-type: text/html; charset=utf-8");
 class CatalogueController extends Controller
 {
 	//商品目录首页
-	public function actionIndex($id=0)
+	public function actionIndex()
 	{
+		$id = Yii::app()->request->getParam('id','0');
 		$data = Catalogue::model()->getSon($id);
 		$this->render('index',array('data'=>$data));
 	}
@@ -51,8 +52,9 @@ class CatalogueController extends Controller
 		$this->render('create',array('model'=>$model,'data'=>$data,'id'=>$id));
 	}
 	//更新编辑
-	public function actionUpdate($id)
+	public function actionUpdate()
 	{
+		$id = Yii::app()->request->getParam('id');
 		$model = Catalogue::model();
 		$data = $model->findByPk($id);
 		$select =  Catalogue::model()->getAll();
@@ -60,11 +62,11 @@ class CatalogueController extends Controller
 		if(isset($_POST['Catalogue']))
 		{
 			$name = $_POST['Catalogue']['name'];
-			$describe = $_POST['Catalogue']['describe'];
+			$describe = $_POST['Catalogue']['series'];
 			$parent_id = $_POST['Catalogue']['parent_id'];
 			$show = $_POST['Catalogue']['show'];
 
-			$result = $model->updateByPk($id,array('name'=>$name,'describe'=>$describe,'parent_id'=>$parent_id,'show'=>$show)); 
+			$result = $model->updateByPk($id,array('name'=>$name,'series'=>$series,'parent_id'=>$parent_id,'show'=>$show)); 
 			//进行表单验证
 			if($result)
 			{
@@ -79,8 +81,10 @@ class CatalogueController extends Controller
 		$this->render('update',array('model'=>$model,'data'=>$data,'select'=>$select));
 	}
 	//删除
-	public function actiondelete($id)
+	public function actiondelete()
 	{
+		$id = Yii::app()->request->getParam('id');
+		$result = 
 		$result = Catalogue::model()->deleteByPk($id);
 		if($result){
 			Yii::app()->user->setFlash('Info','删除目录成功');

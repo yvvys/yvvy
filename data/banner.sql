@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.7
+-- version phpStudy 2014
 -- http://www.phpmyadmin.net
 --
--- Ö÷»ú: localhost
--- Éú³ÉÈÕÆÚ: 2015 Äê 09 ÔÂ 10 ÈÕ 09:55
--- ·şÎñÆ÷°æ±¾: 5.5.17
--- PHP °æ±¾: 5.3.8
+-- ä¸»æœº: localhost
+-- ç”Ÿæˆæ—¥æœŸ: 2015 å¹´ 09 æœˆ 18 æ—¥ 17:41
+-- æœåŠ¡å™¨ç‰ˆæœ¬: 5.5.40
+-- PHP ç‰ˆæœ¬: 5.3.29
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,34 +17,34 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Êı¾İ¿â: `yvvyshop`
+-- æ•°æ®åº“: `yvvyshop`
 --
 
 -- --------------------------------------------------------
 
 --
--- ±íµÄ½á¹¹ `banner`
+-- è¡¨çš„ç»“æ„ `banner`
 --
 
 CREATE TABLE IF NOT EXISTS `banner` (
-  `banner_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '¹ã¸æID',
-  `title` varchar(64) NOT NULL COMMENT '¹ã¸æ±êÌâ',
-  `image` varchar(128) NOT NULL COMMENT 'Í¼Æ¬µØÖ·',
-  `url` varchar(128) NOT NULL COMMENT 'Á´½Ó',
-  `banner_group` varchar(128) NOT NULL COMMENT '¹ã¸æ×é',
-  `active` enum('0','1') NOT NULL DEFAULT '1' COMMENT 'ÊÇ·ñÓĞĞ§',
-  `introduce` varchar(1000) NOT NULL DEFAULT '' COMMENT '½éÉÜ',
+  `banner_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'å¹¿å‘ŠID',
+  `title` varchar(64) NOT NULL COMMENT 'å¹¿å‘Šæ ‡é¢˜',
+  `image` varchar(128) NOT NULL COMMENT 'å›¾ç‰‡åœ°å€',
+  `url` varchar(128) NOT NULL COMMENT 'é“¾æ¥',
+  `banner_group` varchar(128) NOT NULL COMMENT 'å¹¿å‘Šç»„',
+  `active` enum('0','1') NOT NULL DEFAULT '1' COMMENT 'æ˜¯å¦æœ‰æ•ˆ',
+  `introduce` varchar(1000) NOT NULL DEFAULT '' COMMENT 'ä»‹ç»',
   `banner_order` tinyint(4) NOT NULL,
   PRIMARY KEY (`banner_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- ×ª´æ±íÖĞµÄÊı¾İ `banner`
+-- è½¬å­˜è¡¨ä¸­çš„æ•°æ® `banner`
 --
 
 INSERT INTO `banner` (`banner_id`, `title`, `image`, `url`, `banner_group`, `active`, `introduce`, `banner_order`) VALUES
-(3, '²âÊÔÄÚÈİ', '/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg', 'http://www.baidu.com', '231', '1', 'asdasasa', 1),
-(4, '²âÊÔÄÚÈİ', '/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg', 'http://www.baidu.com', '1', '1', 'asdasasa', 1);
+(3, 'å“‡å“ˆå“ˆå†…å®¹', '/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg', 'http://www.baidu.com', '2', '1', 'asdasasa', 1),
+(7, 'æµ‹è¯•', '/uploads/images/2015-09/59ff2b1dda99508f42fd3f8ad2e73d8f.jpg', 'æµ‹è¯•', '1', '1', 'æµ‹è¯•', 22);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

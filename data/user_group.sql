@@ -23,23 +23,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user`
+-- 表的结构 `user_group`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(36) NOT NULL,
-  `password` varchar(64) NOT NULL,
-  `user_group` varchar(500) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+CREATE TABLE IF NOT EXISTS `user_group` (
+  `group_id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_name` varchar(36) NOT NULL,
+  `controller` varchar(36) NOT NULL,
+  PRIMARY KEY (`group_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- 转存表中的数据 `user`
+-- 转存表中的数据 `user_group`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `user_group`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '["1"]');
+INSERT INTO `user_group` (`group_id`, `group_name`, `controller`) VALUES
+(1, '全部权限', 'all'),
+(2, '商品分类', 'catalogue'),
+(3, '前端用户', 'customer'),
+(4, '新闻管理', 'news'),
+(5, '线下店铺', 'shop'),
+(6, 'spu管理', 'spu'),
+(7, 'sku管理', 'goods'),
+(8, '后台帐号', 'user'),
+(9, '权限管理', 'user_group'),
+(10, '广告管理', 'banner');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

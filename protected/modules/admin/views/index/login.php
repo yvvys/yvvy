@@ -102,7 +102,7 @@
 
 						<i class="icon-lock"></i>
 
-						<?php echo $form->passwordField($model,'password',array('class'=>'m-wrap placeholder-no-fix','type'=>'"password','placeholder'=>'Password')) ?>
+						<?php echo $form->passwordField($model,'password',array('class'=>'m-wrap placeholder-no-fix','type'=>'password','placeholder'=>'Password')) ?>
 
 					</div>
 						<?php echo $form->error($model,'password'); ?>

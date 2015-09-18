@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2015 年 09 月 11 日 16:02
+-- 生成日期: 2015 年 09 月 18 日 17:43
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `shop` (
 --
 
 INSERT INTO `shop` (`shop_id`, `shop_name`, `region`, `city`, `address`, `phone`, `longitude`, `latitude`, `image`, `baidu`) VALUES
-('122131', '测试', '北京', '北京市', '北京市丰台区', '199827323', '223232.2', '32324232', '', '');
+('122131', '测试', '北京', '北京市', '北京市丰台区', '199827323', '223232.2', '32324232', '/uploads/images/2015-09/3f67cc93716ef3041763f00583ad096d.jpg', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

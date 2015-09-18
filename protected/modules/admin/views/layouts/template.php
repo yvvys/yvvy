@@ -192,9 +192,18 @@
 
 						<li >
 
-							<a href="<?php echo Yii::app()->createUrl('admin/Catalogue')?>">
+							<a href="<?php echo Yii::app()->createUrl('admin/catalogue')?>">
 
 							商品目录</a>
+
+						</li>
+
+
+						<li >
+
+							<a href="<?php echo Yii::app()->createUrl('admin/series')?>">
+
+							商品系列</a>
 
 						</li>
 
@@ -367,115 +376,13 @@
 
 				</li>
 
-				<li>
-
-					<a href="javascript:;">
-
-					<i class="icon-folder-open"></i> 
-
-					<span class="title">4 Level Menu</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li>
-
-							<a href="javascript:;">
-
-							<i class="icon-cogs"></i> 
-
-							Item 1
-
-							<span class="arrow"></span>
-
-							</a>
-
-							<ul class="sub-menu">
-
-								<li>
-
-									<a href="javascript:;">
-
-									<i class="icon-user"></i>
-
-									Sample Link 1
-
-									<span class="arrow"></span>
-
-									</a>
-
-									<ul class="sub-menu">
-
-										<li><a href="#"><i class="icon-remove"></i> Sample Link 1</a></li>
-
-										<li><a href="#"><i class="icon-pencil"></i> Sample Link 1</a></li>
-
-										<li><a href="#"><i class="icon-edit"></i> Sample Link 1</a></li>
-
-									</ul>
-
-								</li>
-
-								<li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
-
-								<li><a href="#"><i class="icon-external-link"></i>  Sample Link 2</a></li>
-
-								<li><a href="#"><i class="icon-bell"></i>  Sample Link 3</a></li>
-
-							</ul>
-
-						</li>
-
-						<li>
-
-							<a href="javascript:;">
-
-							<i class="icon-globe"></i> 
-
-							Item 2
-
-							<span class="arrow"></span>
-
-							</a>
-
-							<ul class="sub-menu">
-
-								<li><a href="#"><i class="icon-user"></i>  Sample Link 1</a></li>
-
-								<li><a href="#"><i class="icon-external-link"></i>  Sample Link 1</a></li>
-
-								<li><a href="#"><i class="icon-bell"></i>  Sample Link 1</a></li>
-
-							</ul>
-
-						</li>
-
-						<li>
-
-							<a href="#">
-
-							<i class="icon-folder-open"></i>
-
-							Item 3
-
-							</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
 				<li class="">
 
 					<a href="javascript:;">
 
 					<i class="icon-user"></i> 
 
-					<span class="title">Login Options</span>
+					<span class="title">个人中心</span>
 
 					<span class="arrow "></span>
 
@@ -487,15 +394,7 @@
 
 							<a href="login.html">
 
-							Login Form 1</a>
-
-						</li>
-
-						<li >
-
-							<a href="login_soft.html">
-
-							Login Form 2</a>
+							修改密码</a>
 
 						</li>
 

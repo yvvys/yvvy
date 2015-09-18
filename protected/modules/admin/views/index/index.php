@@ -64,15 +64,15 @@
 
 								<!-- BEGIN FORM-->
 
-								<form action="#" class="form-horizontal">
-
+								<?php $form=$this->beginWidget('CActiveForm')?>
+								<div class="portlet-body form form-horizontal">
 									<div class="control-group">
-
-										<label class="control-label">原始密码</label>
+										<?php echo $form->labelEx($model,'password',array('class'=>'control-label'))?>
 
 										<div class="controls">
 
-											<input type="text" class="span6 m-wrap tooltips"  data-trigger="hover" data-original-title="请输入密码" />
+											<?php echo $form->passwordField($model,'password',array('class'=>'span6 m-wrap tooltips','data-original-title'=>'请输入密码',))?>
+											<?php echo $form->error($model,'password')?>
 
 										</div>
 
@@ -80,23 +80,24 @@
 
 									<div class="control-group">
 
-										<label class="control-label">新密码</label>
+										<?php echo $form->labelEx($model,'password1',array('class'=>'control-label'))?>
 
 										<div class="controls">
 
-											<input type="text" class="span6 m-wrap tooltips" data-trigger="hover" data-original-title="请输入新的密码" />
+											<?php echo $form->passwordField($model,'password1',array('class'=>'span6 m-wrap tooltips','data-original-title'=>'请输入新密码',))?>
+											<?php echo $form->error($model,'password1')?>
 
 										</div>
 
 									</div>
 
 									<div class="control-group">
-
-										<label class="control-label">确认密码</label>
+										<?php echo $form->labelEx($model,'password2',array('class'=>'control-label'))?>
 
 										<div class="controls">
 
-											<input type="text" class="span6 m-wrap tooltips" data-trigger="hover" data-original-title="请再次输入新的密码" />                       
+											<?php echo $form->passwordField($model,'password2',array('class'=>'span6 m-wrap tooltips','data-original-title'=>'请输入新密码',))?>
+											<?php echo $form->error($model,'password2')?> 
 
 										</div>
 
@@ -110,8 +111,8 @@
 										<button type="button" class="btn">取消</button>                            
 
 									</div>
-
-								</form>
+								</div>
+								<?php $this->endWidget()?>
 
 								<!-- END FORM-->       
 
@@ -124,3 +125,4 @@
 					</div>
 
 				</div>
+			</div>

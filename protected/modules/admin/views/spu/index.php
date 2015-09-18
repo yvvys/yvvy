@@ -32,7 +32,7 @@
 
 							</li>
 
-							<li><a href="#">SPU维护</a></li>
+							<li><a href="<?php echo Yii::app()->createUrl('admin/spu/index')?>">SPU管理</a></li>
 
 						</ul>
 
@@ -70,9 +70,9 @@
 
 									<div class="btn-group">
 
-										<a href='<?php echo Yii::app()->createUrl('admin/spu/create')?>'><button id="sample_editable_1_new" class="btn green">
+										<a href='<?php echo Yii::app()->createUrl('admin/spu/update')?>'><button id="sample_editable_1_new" class="btn green">
 
-										创建SKU <i class="icon-plus"></i></button></a>
+										创建SPU <i class="icon-plus"></i></button></a>
 
 										</button>
 
@@ -90,7 +90,7 @@
 
 											<th>SKU名称</th>
 
-											<th>描述</th>
+											<th>系列</th>
 
 											<th>商品分类</th>
 
@@ -105,14 +105,14 @@
 									</thead>
 
 									<tbody>
-										<?php foreach($data as $v){?>
+										<?php foreach($data->getData() as $v){?>
 										<tr class="">
 
 											<td class="center"><?php echo $v['spu_id']?></td>
 
 											<td class="center"><?php echo $v['spu_name']?></td>
 
-											<td class="center"><?php echo $v['describe']?></td>
+											<td class="center"><?php echo $v['series_name']?></td>
 
 											<td class="center"><?php echo $v['classfy_name']?></td>
 

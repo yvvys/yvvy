@@ -16,24 +16,39 @@ class Spu extends CActiveRecord
 		return array(
 			'spu_id' 	=> 'SPU 编号',
 			'spu_name' 	=> 'SPU 名称',
-			'describe' 	=> '描述'	,
 			'classfy_id'=> '分类'	,
 			'is_sale' 	=> '是否在售',
+			'series_id' => '系列',
 		);
 	}
 
 	public function rules()
 	{
 		return array(
-			array('spu_id','required','message'=>'SPU 编号必填'),
+			array('spu_id','checkSpu'),
 			array('spu_name','required','message'=>'SPU 名称必填'),
-			array('describe','safe'),
 			array('classfy_id','required','message'=>'SPU 分类必选'),
 			array('is_sale','required','message'=>'是否在售必选'),
 			array('classfy_name','safe'),
+			array('series_id','safe'),
+			array('series_name','safe'),
 
 		);
 
+	}
+
+
+	public function checkSpu()
+	{
+
+		if(empty($this->spu_id)){
+			$this->addError('spu_id','SPU ID必填');
+		}else{
+			$result = Spu::model()->findByPk($this->spu_id);
+			if($result){
+			$this->addError('spu_id','SPU 已存在 请重新输入');			
+			}
+		}	
 	}
 
 

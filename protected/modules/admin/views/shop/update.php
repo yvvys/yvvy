@@ -63,7 +63,7 @@
 							<div class="portlet-body">
 
 								<?php $form = $this->beginWidget('CActiveForm')?>
-								<div class="portlet-body form form-horizontal">
+								
 
 								<!-- BEGIN FORM-->
 									<div class="control-group">
