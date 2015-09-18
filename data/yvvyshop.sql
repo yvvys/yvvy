@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.7
+-- version phpStudy 2014
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2015 年 09 月 18 日 14:30
--- 服务器版本: 5.5.17
--- PHP 版本: 5.3.8
+-- 生成日期: 2015 年 09 月 18 日 17:56
+-- 服务器版本: 5.5.40
+-- PHP 版本: 5.3.29
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -36,15 +36,15 @@ CREATE TABLE IF NOT EXISTS `banner` (
   `introduce` varchar(1000) NOT NULL DEFAULT '' COMMENT '介绍',
   `banner_order` tinyint(4) NOT NULL,
   PRIMARY KEY (`banner_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- 转存表中的数据 `banner`
 --
 
 INSERT INTO `banner` (`banner_id`, `title`, `image`, `url`, `banner_group`, `active`, `introduce`, `banner_order`) VALUES
-(3, '花花内容', '/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg', 'http://www.baidu.com', '2', '1', 'asdasasa', 1),
-(4, 'hh内容', '/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg', 'http://www.baidu.com', '1', '1', 'asdasasa', 1);
+(3, '哇哈哈内容', '/uploads/images/2015-09/5bd20c1a4e150c96ebf7cea3ab2f4ae4.jpg', 'http://www.baidu.com', '2', '1', 'asdasasa', 1),
+(7, '测试', '/uploads/images/2015-09/59ff2b1dda99508f42fd3f8ad2e73d8f.jpg', '测试', '1', '1', '测试', 22);
 
 -- --------------------------------------------------------
 
@@ -60,45 +60,26 @@ CREATE TABLE IF NOT EXISTS `catalogue` (
   `status` int(4) NOT NULL DEFAULT '1',
   `level` int(4) NOT NULL,
   `tree` varchar(255) NOT NULL,
-  `describe` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品分类目录表' AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品分类目录表' AUTO_INCREMENT=15 ;
 
 --
 -- 转存表中的数据 `catalogue`
 --
 
-INSERT INTO `catalogue` (`id`, `name`, `parent_id`, `show`, `status`, `level`, `tree`, `describe`) VALUES
-(26, '餐厅', 0, 0, 1, 1, '餐厅', '餐厅'),
-(27, '餐桌', 26, 0, 1, 2, '餐厅>餐桌', '餐桌'),
-(28, '客厅', 0, 0, 1, 1, '客厅', '客厅'),
-(29, '床头柜', 28, 0, 1, 2, '客厅>床头柜', '客厅--床头柜'),
-(30, '卧室', 0, 0, 1, 1, '卧室', '卧室');
-
--- --------------------------------------------------------
-
---
--- 表的结构 `customer`
---
-
-CREATE TABLE IF NOT EXISTS `customer` (
-  `customer_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `customer_name` varchar(32) NOT NULL,
-  `ipone` char(11) NOT NULL,
-  `email` varchar(64) NOT NULL,
-  `password` varchar(64) NOT NULL,
-  `city` varchar(32) NOT NULL,
-  `created` char(11) NOT NULL,
-  PRIMARY KEY (`customer_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- 转存表中的数据 `customer`
---
-
-INSERT INTO `customer` (`customer_id`, `customer_name`, `ipone`, `email`, `password`, `city`, `created`) VALUES
-(1, '王小呀', '1861033241', 'wangxiaoya@163.com', '868ee6d8f4ad7c060c4181e137677c50', '北京', '1391033241');
+INSERT INTO `catalogue` (`id`, `name`, `parent_id`, `show`, `status`, `level`, `tree`) VALUES
+(4, '潮酷家具', 0, 1, 1, 1, '潮酷家具'),
+(5, '桌面摆饰', 0, 1, 1, 1, '桌面摆饰'),
+(6, '个性抱枕', 0, 1, 1, 1, '个性抱枕'),
+(7, '装饰植物', 0, 1, 1, 1, '装饰植物'),
+(8, '艺术玻璃', 5, 1, 1, 2, '桌面摆饰>艺术玻璃'),
+(9, '奢华陶瓷', 5, 1, 1, 2, '桌面摆饰>奢华陶瓷'),
+(10, '手工皮革', 5, 1, 1, 2, '桌面摆饰>手工皮革'),
+(11, '动物图腾', 5, 1, 1, 2, '桌面摆饰>动物图腾'),
+(12, '装饰画', 7, 1, 1, 2, '装饰植物>装饰画'),
+(13, '植物', 7, 1, 1, 2, '装饰植物>植物'),
+(14, '生活配饰', 7, 1, 1, 2, '装饰植物>生活配饰');
 
 -- --------------------------------------------------------
 
@@ -107,6 +88,7 @@ INSERT INTO `customer` (`customer_id`, `customer_name`, `ipone`, `email`, `passw
 --
 
 CREATE TABLE IF NOT EXISTS `goods` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `sku_id` varchar(25) NOT NULL,
   `sku_name` varchar(255) NOT NULL,
   `spu_id` varchar(25) NOT NULL,
@@ -116,18 +98,13 @@ CREATE TABLE IF NOT EXISTS `goods` (
   `material` varchar(50) NOT NULL COMMENT '材质',
   `specs` varchar(50) NOT NULL COMMENT '规格',
   `image` varchar(600) NOT NULL COMMENT '商品图片',
-  `is_top` enum('是','否') NOT NULL DEFAULT '否',
-  `top_image` varchar(128) NOT NULL,
-  PRIMARY KEY (`sku_id`),
-  UNIQUE KEY `goods_id` (`sku_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品详细信息表';
-
---
--- 转存表中的数据 `goods`
---
-
-INSERT INTO `goods` (`sku_id`, `sku_name`, `spu_id`, `price`, `color`, `sku_num`, `material`, `specs`, `image`, `is_top`, `top_image`) VALUES
-('aa', 'aa', '111', 11, '11', 11, '11', '11', '["\\/uploads\\/images\\/2015-09\\/4cafeee212d81c0ca70c6a57db8f520f.jpg","\\/uploads\\/images\\/2015-09\\/b6d00969712467da1546ed585a92f335.jpg","\\/uploads\\/images\\/2015-09\\/73beb66f566de723c1cac3799007dd36.jpg"]', '是', '');
+  `is_top` enum('是','否') NOT NULL DEFAULT '否' COMMENT '主展示',
+  `top_image` varchar(128) NOT NULL COMMENT '头图',
+  `introduce` varchar(1000) NOT NULL DEFAULT '' COMMENT '介绍',
+  `content` text NOT NULL COMMENT '内容',
+  `color_pic` varchar(128) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品详细信息表' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -150,8 +127,29 @@ CREATE TABLE IF NOT EXISTS `news` (
 --
 
 INSERT INTO `news` (`news_id`, `title`, `content`, `created`, `updated`, `issuer`) VALUES
-(1, 'xxxxx', 'xxxxxxxx', 123, 456, '123'),
-(5, '2112', '<p>1221<br/></p>', 1442477543, 1442477543, '龙娃也');
+(5, '测试222', '<p><img src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704074681.jpg" _src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704074681.jpg" style=""/></p><p><img src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704117657.jpg" _src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704117657.jpg" style=""/></p><p><img src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704144426.jpg" _src="http://yvvy.test.com/uploads/Ueditor/20150910/14418704144426.jpg" style=""/></p><p><br/></p>', 1441870431, 1441870431, 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `series`
+--
+
+CREATE TABLE IF NOT EXISTS `series` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL,
+  `parent_id` varchar(255) NOT NULL,
+  `parent_name` varchar(50) NOT NULL COMMENT '所属目录',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='产品系列表' AUTO_INCREMENT=8 ;
+
+--
+-- 转存表中的数据 `series`
+--
+
+INSERT INTO `series` (`id`, `name`, `parent_id`, `parent_name`) VALUES
+(7, '青少年3', '11', '桌面摆饰>动物图腾');
 
 -- --------------------------------------------------------
 
@@ -180,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `shop` (
 --
 
 INSERT INTO `shop` (`shop_id`, `shop_name`, `region`, `city`, `address`, `phone`, `longitude`, `latitude`, `image`, `baidu`) VALUES
-('122131', '测试', '北京', '北京市', '北京市丰台区', '199827323', '223232.2', '32324232', '', '');
+('122131', '测试', '北京', '北京市', '北京市丰台区', '199827323', '223232.2', '32324232', '/uploads/images/2015-09/3f67cc93716ef3041763f00583ad096d.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -192,7 +190,10 @@ CREATE TABLE IF NOT EXISTS `spu` (
   `spu_id` varchar(25) NOT NULL,
   `spu_name` varchar(50) NOT NULL,
   `is_sale` int(4) NOT NULL,
-  `describe` varchar(255) NOT NULL,
+  `series_id` int(10) NOT NULL,
+  `series_name` varchar(50) NOT NULL,
+  `spu_image` varchar(255) NOT NULL COMMENT 'SPU头图',
+  `add_time` varchar(255) NOT NULL,
   `classfy_id` varchar(255) NOT NULL,
   `classfy_name` varchar(255) NOT NULL,
   PRIMARY KEY (`spu_id`),
@@ -204,12 +205,9 @@ CREATE TABLE IF NOT EXISTS `spu` (
 -- 转存表中的数据 `spu`
 --
 
-INSERT INTO `spu` (`spu_id`, `spu_name`, `is_sale`, `describe`, `classfy_id`, `classfy_name`) VALUES
-('E121211', '0', 1, '测试2', '23', '客厅 > 床头柜'),
-('E121212', '1212', 1, '', '21', '客厅'),
-('E121213', '0', 0, '', '21', '客厅'),
-('E121214', 'iPhone12', 1, '', '23', '客厅 > 床头柜'),
-('E121215', '测试44', 1, '测试44', '27', '餐厅>餐桌');
+INSERT INTO `spu` (`spu_id`, `spu_name`, `is_sale`, `series_id`, `series_name`, `spu_image`, `add_time`, `classfy_id`, `classfy_name`) VALUES
+('E121211', 'iPhone9', 1, 0, '', '', '', '5', '桌面摆饰'),
+('E121219', 'iPhone12', 1, 7, '青少年3', '', '', '14', '装饰植物>生活配饰');
 
 -- --------------------------------------------------------
 
@@ -223,15 +221,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(64) NOT NULL,
   `user_group` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- 转存表中的数据 `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `user_group`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '["1"]'),
-(3, '龙娃也', '21232f297a57a5a743894a0e4a801fc3', '["2","3","4"]');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '["1"]');
 
 -- --------------------------------------------------------
 
