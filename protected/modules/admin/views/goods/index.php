@@ -24,15 +24,9 @@
 
 							</li>
 
-							<li>
+						
 
-								<a href="#">商品管理</a>
-
-								<i class="icon-angle-right"></i>
-
-							</li>
-
-							<li><a href="#">商品目录维护</a></li>
+							<li><a href="<?php echo Yii::app()->createUrl('/admin/goods/index')?>">商品目录维护</a></li>
 
 						</ul>
 
@@ -72,7 +66,7 @@
 
 										<a href='<?php echo Yii::app()->createUrl('admin/goods/update')?>'><button id="sample_editable_1_new" class="btn green">
 
-										创建新的商品 <i class="icon-plus"></i></button></a>
+										创建sku <i class="icon-plus"></i></button></a>
 
 
 									</div>
@@ -81,15 +75,7 @@
 									<div class="sub-title-box toolbar">
 									    <div class="input-append">
 									     <form action="<?php echo $this->createUrl($this->getAction()->id)?>" method="post" id="form1">
-									        <div style="float: left">
-									           
-									            <?php 
-									            
-									            echo CHtml::dropDownList('sku_id',$_POST['sku_id'], Goods::model()->getId(), array('empty'=>'--请选择--','class'=>'m-wrap')); 
-
-									            ?>
-									            
-									        </div>
+									     
 									        <div style="float: left">
 									        
 									            <?php echo CHtml::textField('sku_name',$_POST['sku_name'],
@@ -117,7 +103,7 @@
 
 											<th>所属SPU</th>
 
-											<th>图片</th>
+											<th>主图</th>
 
 											<th>颜色</th>
 
@@ -146,7 +132,7 @@
 
 											<td class="center"><?php echo $v['spu_id']?></td>
 
-											<td class="center"><?php echo $v['top_image']?></td>
+											<td class="center"><?php echo $v['top_image'] ? '<img src="'.$v['top_image'].'" width="30" height="30" />' : '';?></td>
 
 											<td class="center"><?php echo $v['color']?></td>
 
@@ -156,7 +142,7 @@
 
 											<td class="center"><?php echo $v['is_top']? '是':'否';?></td>
 
-											<td class="edit"><a href="<?php echo Yii::app()->createUrl('admin/goods/update',array('sku_id'=>$v['sku_id']));?>">编辑</a></td>
+											<td class="edit"><a href="<?php echo Yii::app()->createUrl('admin/goods/update',array('id'=>$v['id']));?>">编辑</a></td>
 
 											<td class="delete"><a href='javascript:if(confirm("确实要删除该SKU?"))location="<?php echo  $this->createUrl('goods/delete',array('sku_id'=>$v['sku_id']))?>"'>删除</a></td>
 										</tr>

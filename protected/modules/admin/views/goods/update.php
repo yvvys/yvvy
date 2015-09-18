@@ -191,7 +191,7 @@ overflow-y:auto;
 
 						<h3 class="page-title">
 
-							线下门店<small>&nbsp;&nbsp;&nbsp;&nbsp;添加线下门店</small>
+							sku管理
 
 						</h3>
 
@@ -201,21 +201,15 @@ overflow-y:auto;
 
 								<i class="icon-home"></i>
 
-								<a href="index.html">首页</a> 
+								<a href="<?php echo Yii::app()->homeUrl?>">首页</a> 
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li>
+						
 
-								<a href="#">商品信息</a>
-
-								<i class="icon-angle-right"></i>
-
-							</li>
-
-							<li><a href="#">商品信息</a></li>
+							<li><a href="<?php echo Yii::app()->createUrl('admin/goods/index');?> ">商品信息</a></li>
 
 						</ul>
 
@@ -247,7 +241,12 @@ overflow-y:auto;
 
 							<div class="portlet-body">
 
-								<?php $form = $this->beginWidget('CActiveForm')?>
+								<?php 
+
+							
+								$form = $this->beginWidget('CActiveForm',array('htmlOptions'=>array('enctype'=>"multipart/form-data")));
+
+								?>
 								<div class="portlet-body form form-horizontal">
 
 
@@ -307,6 +306,27 @@ overflow-y:auto;
 										</div>
 									</div>
 
+											<div class="control-group">
+								<?php echo $form->labelEx($model,'introduce',array('class'=>'control-label')); ?>
+										<div class="controls">
+										
+											 <?php $this->widget('application.widgets.Ueditor.UeditorWidget',array('initialFrameHeight'=>'150')); ?>
+               								 <textarea class="tff_ueditor" id="content" name="Goods[introduce]"  style="width:650px;height:800px;"><?php echo $model->introduce; ?></textarea>
+										</div>
+
+									</div>
+										<div class="control-group">
+
+										<?php echo $form->labelEx($model,'color_pic',array('class'=>'control-label')); ?>
+										<div class="controls">
+											<?php echo $form->textField($model,'color_pic',array('class'=>'span6'));?> 
+											<input type="file" name="color_pic" />
+											
+											
+										</div>
+
+									</div>
+
 									<div class="control-group">
 
 										<?php echo $form->labelEx($model,'color',array('class'=>'control-label')); ?>
@@ -336,6 +356,7 @@ overflow-y:auto;
 											
 										</div>
 									</div>
+
 									<div class="control-group">
 										
 										<?php echo $form->labelEx($model,'image',array('class'=>'control-label')); ?>										
@@ -354,10 +375,22 @@ overflow-y:auto;
 										<div class="controls">
 											<?php echo $form->textField($model,'top_image',array('class'=>'span6','id'=>'top_image'));?> 
 											<?php echo $form->error($model,'top_image');?>
+
+
 											
 										</div>
 									</div>		
 
+							
+								<div class="control-group">
+								<?php echo $form->labelEx($model,'content',array('class'=>'control-label')); ?>
+										<div class="controls">
+										
+											 <?php $this->widget('application.widgets.Ueditor.UeditorWidget'); ?>
+               								 <textarea class="tff_ueditor" id="content1" name="Goods[content]"  style="width:650px;height:800px;"><?php echo $model->content; ?></textarea>
+										</div>
+
+									</div>
 
 									<div class="control-group">
 										
@@ -367,7 +400,7 @@ overflow-y:auto;
 
 											<label class="radio">
 
-											<input type="radio" name="Goods[is_top]" value="1"  />
+											<input type="radio" name="Goods[is_top]" value="是"  />
 
 											是
 
@@ -375,7 +408,7 @@ overflow-y:auto;
 
 											<label class="radio">
 
-											<input type="radio" name="Goods[is_top]" value="0" checked />
+											<input type="radio" name="Goods[is_top]" value="否" checked />
 
 											否
 

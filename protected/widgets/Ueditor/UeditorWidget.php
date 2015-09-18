@@ -31,11 +31,12 @@ class UeditorWidget extends CInputWidget {
     public $serverUrl = null;
 
     public $ueditorSelector = '.tff_ueditor';
-    public $initialFrameHeight = '450';
+    public $initialFrameHeight = 250;
     public $options = array();
 
     public function init()
     {
+    
         //发布资源文件
         $assetManager = Yii::app()->assetManager;
         $this->_assetUrl = $assetManager->publish( __DIR__ . DIRECTORY_SEPARATOR . 'resource' );
@@ -48,6 +49,8 @@ class UeditorWidget extends CInputWidget {
 
     public function run()
     {
+
+
         //注册资源文件
         Yii::app()->clientScript->registerCssFile($this->_assetUrl . '/themes/default/css/umeditor.css');
         $clientScript = Yii::app()->clientScript;

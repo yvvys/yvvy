@@ -19,12 +19,16 @@ class Goods extends CActiveRecord
   			"sku_name"		=>"SKU名称",
   			"price"			=>"价格",
   			"color"			=>"颜色",
+  			"color_pic"		=>"色板图",
   			"sku_num"		=>"数量", 
   			"material"		=>"材质", 
   			"specs"			=>"规格",
   			"image"			=>"图片",
   			"top_image"		=>'头图',
-  			"is_top"		=>"是否头图",
+  			"is_top"		=>"主展示",
+  			"introduce"		=>"简介",
+  			"content"		=>"内容",
+
 			);
 	}
 
@@ -34,14 +38,11 @@ class Goods extends CActiveRecord
 			array("sku_id","checkSku",),
 			array("spu_id","required","message"=>"SPU编号必填",),
 			array("sku_name","required","message"=>"SKU名称必填",),
-			array("price","safe",),
 			array("color","required","message"=>"颜色必填",),
-			array("sku_num","safe",),
 			array("material","required","message"=>"材质必填",),
 			array("specs","required","message"=>"规格必填",),
-			array("image","safe",),
-			array("is_top","safe",),
-			array("top_image","safe",),
+			
+			array('spk_id,spu_id,sku_name,price,sku_num,material,specs,is_top,image,top_image,color_pic,introduce,content',"safe",),
 			);
 
 	}
