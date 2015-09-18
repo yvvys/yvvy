@@ -3063,3 +3063,363 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/admin/js/jquery-1.10.1.min.map
 ---
+2015/09/17 18:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('test/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/index
+---
+2015/09/17 18:45:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'show' doesn't have a default value. The SQL statement executed was: INSERT INTO `Catalogue` (`status`, `name`, `describe`, `parent_id`, `tree`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5). Bound with :yp0=1, :yp1='潮酷家具', :yp2='', :yp3=0, :yp4='潮酷家具', :yp5=1.
+2015/09/17 18:45:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1364 Field 'show' doesn't have a default value' in D:\WWW\yvvy\yii\db\CDbCommand.php:358
+Stack trace:
+#0 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 D:\WWW\yvvy\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 D:\WWW\yvvy\protected\modules\admin\controllers\catalogueController.php(42): CActiveRecord->save()
+#3 D:\WWW\yvvy\yii\web\actions\CInlineAction.php(49): CatalogueController->actionCreate()
+#4 D:\WWW\yvvy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\WWW\yvvy\protected\modules\admin\components\Controller.php(36): CFilterChain->run()
+#7 D:\WWW\yvvy\yii\web\filters\CInlineFilter.php(58): Controller->filterAccessAuth(Object(CFilterChain))
+#8 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#10 D:\WWW\yvvy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('create')
+#12 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/catalogue...')
+#13 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#14 D:\WWW\yvvy\index.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/admin/catalogue/create.html
+HTTP_REFERER=http://yvvy.mom.com/admin/catalogue/create.html
+---
+2015/09/18 09:51:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/09/18 09:51:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/09/18 09:54:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 09:55:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aaa".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('aaa')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('aaa')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/goods/aaa')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/goods/aaa
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html?sku_id=aa
+---
+2015/09/18 09:55:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aaaa".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('aaaa')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('aaaa')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/goods/aaa...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/goods/aaaa
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html?sku_id=aa
+---
+2015/09/18 09:55:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aaaaaaaaaa".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('aaaaaaaaaa')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('aaaaaaaaaa')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/goods/aaa...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/goods/aaaaaaaaaa
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html?sku_id=aa
+---
+2015/09/18 09:55:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "aaaa".' in D:\WWW\yvvy\yii\web\CController.php:483
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CController.php(270): CController->missingAction('aaaa')
+#1 D:\WWW\yvvy\yii\web\CWebApplication.php(282): CController->run('aaaa')
+#2 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/goods/aaa...')
+#3 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\WWW\yvvy\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/goods/aaaa
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html?sku_id=aa
+---
+2015/09/18 10:40:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 10:43:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 10:46:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 10:47:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 10:50:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://yvvy.mom.com/
+---
+2015/09/18 11:10:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 11:10:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/uploadify-cancel.png".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('assets/img/uplo...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/img/uploadify-cancel.png
+HTTP_REFERER=http://yvvy.mom.com/assets/951256e8/uploadify.css
+---
+2015/09/18 11:21:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 11:35:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 11:36:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 11:36:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 11:36:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/js/jquery-1.10.1.min.map".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/js/jquery...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/js/jquery-1.10.1.min.map
+---
+2015/09/18 11:50:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/uploadify-cancel.png".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('assets/img/uplo...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/img/uploadify-cancel.png
+HTTP_REFERER=http://yvvy.mom.com/assets/951256e8/uploadify.css
+---
+2015/09/18 13:06:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/img/uploadify-cancel.png".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('assets/img/uplo...')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/img/uploadify-cancel.png
+HTTP_REFERER=http://yvvy.mom.com/assets/951256e8/uploadify.css
+---
+2015/09/18 13:17:04 [error] [php] in_array() expects parameter 2 to be array, null given (D:\WWW\yvvy\protected\modules\admin\components\Controller.php:28)
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#2 D:\WWW\yvvy\yii\web\CController.php(265): GoodsController->runActionWithFilters()
+#3 D:\WWW\yvvy\yii\web\CWebApplication.php(282): GoodsController->run()
+#4 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#6 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/admin/goods/update.html
+2015/09/18 13:17:06 [error] [php] in_array() expects parameter 2 to be array, null given (D:\WWW\yvvy\protected\modules\admin\components\Controller.php:28)
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 D:\WWW\yvvy\yii\web\CController.php(291): CFilterChain->run()
+#2 D:\WWW\yvvy\yii\web\CController.php(265): GoodsController->runActionWithFilters()
+#3 D:\WWW\yvvy\yii\web\CWebApplication.php(282): GoodsController->run()
+#4 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#6 D:\WWW\yvvy\index.php(15): CWebApplication->run()
+REQUEST_URI=/admin/goods/update.html
+2015/09/18 13:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=i
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=ip
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=ip
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=i
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=iphone1
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=iphone
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=iphon
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=ipho
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=iph
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=ip
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=i
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=i
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=i
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---
+2015/09/18 13:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/api/index".' in D:\WWW\yvvy\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\WWW\yvvy\yii\web\CWebApplication.php(141): CWebApplication->runController('admin/api/index')
+#1 D:\WWW\yvvy\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\WWW\yvvy\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/api/index.html?keyword=i
+HTTP_REFERER=http://yvvy.mom.com/admin/goods/update.html
+---

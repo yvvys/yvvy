@@ -14,7 +14,7 @@ function getData(val) {
 		$.ajax({
 			type: "post",
 			async: false, //控制同步
-			url: "<?php echo Yii::app()->createUrl('admin/test/index')?>?keyword="+keyword,
+			url: "<?php echo Yii::app()->createUrl('admin/api/index')?>?keyword="+keyword,
 			data: "param=" + val,
 			dataType: "json",
 			cache: false,

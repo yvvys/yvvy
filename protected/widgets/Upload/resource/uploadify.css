@@ -101,3 +101,17 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	height: 20px;
 	text-align: center;
 }
+
+#showimage div {
+    background-color: #7024a7;
+  
+    color: #fff;
+    
+    line-height: 24px;
+    min-height: 24px;
+    opacity: 0.7;
+    position: absolute;
+    text-align: center;
+   
+    width: 150px;
+}
