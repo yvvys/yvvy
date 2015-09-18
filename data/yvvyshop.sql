@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2015 年 09 月 17 日 16:09
+-- 生成日期: 2015 年 09 月 18 日 14:30
 -- 服务器版本: 5.5.17
 -- PHP 版本: 5.3.8
 
@@ -115,8 +115,9 @@ CREATE TABLE IF NOT EXISTS `goods` (
   `sku_num` int(10) NOT NULL,
   `material` varchar(50) NOT NULL COMMENT '材质',
   `specs` varchar(50) NOT NULL COMMENT '规格',
-  `image` varchar(255) NOT NULL COMMENT '商品图片',
-  `is_top` int(2) NOT NULL COMMENT '是否头图',
+  `image` varchar(600) NOT NULL COMMENT '商品图片',
+  `is_top` enum('是','否') NOT NULL DEFAULT '否',
+  `top_image` varchar(128) NOT NULL,
   PRIMARY KEY (`sku_id`),
   UNIQUE KEY `goods_id` (`sku_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品详细信息表';
@@ -125,9 +126,8 @@ CREATE TABLE IF NOT EXISTS `goods` (
 -- 转存表中的数据 `goods`
 --
 
-INSERT INTO `goods` (`sku_id`, `sku_name`, `spu_id`, `price`, `color`, `sku_num`, `material`, `specs`, `image`, `is_top`) VALUES
-('E12121', '21', '12222', 12121, '1212', 12, '121', '1212', '/uploads/images/2015-09/6ae2279980619efaeafef3692528f672.jpg', 0),
-('E12123', '21', 'i', 12121, '1212', 12, '121', '1212', '/uploads/images/2015-09/6ae2279980619efaeafef3692528f672.jpg', 0);
+INSERT INTO `goods` (`sku_id`, `sku_name`, `spu_id`, `price`, `color`, `sku_num`, `material`, `specs`, `image`, `is_top`, `top_image`) VALUES
+('aa', 'aa', '111', 11, '11', 11, '11', '11', '["\\/uploads\\/images\\/2015-09\\/4cafeee212d81c0ca70c6a57db8f520f.jpg","\\/uploads\\/images\\/2015-09\\/b6d00969712467da1546ed585a92f335.jpg","\\/uploads\\/images\\/2015-09\\/73beb66f566de723c1cac3799007dd36.jpg"]', '是', '');
 
 -- --------------------------------------------------------
 
@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `updated` int(11) NOT NULL,
   `issuer` varchar(32) NOT NULL,
   PRIMARY KEY (`news_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- 转存表中的数据 `news`
@@ -151,8 +151,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 
 INSERT INTO `news` (`news_id`, `title`, `content`, `created`, `updated`, `issuer`) VALUES
 (1, 'xxxxx', 'xxxxxxxx', 123, 456, '123'),
-(3, 'qwwq', '<p>千万千万哦</p>', 1441863457, 1441863457, '路人甲'),
-(4, '阿萨撒啊', '<p>撒啊洒洒</p>', 1441863465, 1441863465, '路人甲');
+(5, '2112', '<p>1221<br/></p>', 1442477543, 1442477543, '龙娃也');
 
 -- --------------------------------------------------------
 

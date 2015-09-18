@@ -340,16 +340,28 @@ overflow-y:auto;
 										
 										<?php echo $form->labelEx($model,'image',array('class'=>'control-label')); ?>										
 										<div class="controls">
-											<?php $this->widget('application.widgets.Upload.UploadWidget',array('image'=>$model->image,'type'=>'more'));?>
+											<?php $this->widget('application.widgets.Upload.UploadWidget',array('image'=>$model->image,'type'=>'more','return_id'=>'top_image'));?>
 											<?php //echo CHtml::hiddenField('Goods[image]',$model->image,array('class' => 'span6','id'=>'Banner_pic')); ?>
 					  							
 										</div>
 
 									</div>
 
+
+									<div class="control-group">
+
+										<?php echo $form->labelEx($model,'top_image',array('class'=>'control-label')); ?>
+										<div class="controls">
+											<?php echo $form->textField($model,'top_image',array('class'=>'span6','id'=>'top_image'));?> 
+											<?php echo $form->error($model,'top_image');?>
+											
+										</div>
+									</div>		
+
+
 									<div class="control-group">
 										
-										<label class="control-label">是否头图</label>
+										<label class="control-label">主展示</label>
 
 										<div class="controls">
 

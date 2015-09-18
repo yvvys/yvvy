@@ -6,8 +6,12 @@
                 <?php
                     if($image){
                         $image=json_decode($image,ture);
+                        $str='';
+                        if($return_id<>false){
+                            $str="<div>设为主图</div>";
+                        }
                         foreach($image as $v){
-                            echo '<span id="moreimage"><img src="'.$v.'" /><dt>删除</dt><input type="hidden" value="'.$v.'" name="moreimage[]" /></span>';
+                            echo '<span id="moreimage">'.$str.'<img src="'.$v.'" /><dt>删除</dt><input type="hidden" value="'.$v.'" name="moreimage[]" /></span>';
                         }
                     }
                 ?>
@@ -16,6 +20,7 @@
                           
 <!-- js上传配置文件 -->
 <script type="text/javascript">
+
     $(function() {
         $('#jsup').uploadify({
             //固定配置项
@@ -45,8 +50,12 @@
             if(data['code']==false){
                 alert(data['msg']);
             }else{
+                var str='';
+                if(RETURN_ID != false){
+                    var str='<div>设为主图</div>';
+                }
                 var url = data['msg'];
-                content =  '<span id="moreimage"><img width="150" height="150" src="'+url+'"><dt>删除</dt><input type="hidden" value="'+url+'" name="moreimage[]" /></span>';
+                content =  '<span id="moreimage">'+str+'<img width="150" height="150" src="'+url+'"><dt>删除</dt><input type="hidden" value="'+url+'" name="moreimage[]" /></span>';
                 $('#showimage').append(content);
             }
         }
@@ -54,8 +63,18 @@
 
         $("#moreimage dt").live("click",function(){
            $(this).parent('span').remove();
-     
-    })
+        })
+        <?php
+            if($return_id<>false){
+        ?>
+            $("#moreimage div").live("click",function(){
+                var image=$(this).parent('span').find('input').val();
+                $("#<?php echo $return_id?>").val(image);
+              
+            })
+        <?php
+        }
+        ?>
         function onUploadError(file){
             alert('上传失败，请联系管理员!');
         }

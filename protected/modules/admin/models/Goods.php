@@ -23,6 +23,7 @@ class Goods extends CActiveRecord
   			"material"		=>"材质", 
   			"specs"			=>"规格",
   			"image"			=>"图片",
+  			"top_image"		=>'头图',
   			"is_top"		=>"是否头图",
 			);
 	}
@@ -40,6 +41,7 @@ class Goods extends CActiveRecord
 			array("specs","required","message"=>"规格必填",),
 			array("image","safe",),
 			array("is_top","safe",),
+			array("top_image","safe",),
 			);
 
 	}

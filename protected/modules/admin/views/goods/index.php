@@ -146,7 +146,7 @@
 
 											<td class="center"><?php echo $v['spu_id']?></td>
 
-											<td class="center"><?php echo $v['image']?></td>
+											<td class="center"><?php echo $v['top_image']?></td>
 
 											<td class="center"><?php echo $v['color']?></td>
 
