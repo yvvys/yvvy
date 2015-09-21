@@ -164,7 +164,7 @@
 
 				
 
-				<li class="start ">
+			<!--	<li class="start ">
 
 					<a href="index.html">
 
@@ -175,8 +175,11 @@
 					</a>
 
 				</li>
-
-				<li class="">
+				-->
+				<?php
+					$shopmsg_open_arr=array('catalogue','series','spu','goods');
+				?>
+				<li class="<?php echo in_array(Yii::app()->controller->id,$shopmsg_open_arr) ? 'open' : ''?>">
 
 					<a href="javascript:;">
 
@@ -188,7 +191,7 @@
 
 					</a>
 
-					<ul class="sub-menu">
+					<ul class="sub-menu" style="<?php echo in_array(Yii::app()->controller->id,$shopmsg_open_arr) ? 'display: block;' : ''?>">
 
 						<li >
 
@@ -227,7 +230,7 @@
 
 				</li>
 
-				<li class="">
+				<li class="<?php echo Yii::app()->controller->id=='banner' ? 'open' : ''?>">
 
 					<a href="javascript:;">
 
@@ -239,7 +242,7 @@
 
 					</a>
 
-					<ul class="sub-menu">
+					<ul class="sub-menu" style="<?php echo Yii::app()->controller->id=='banner' ? 'display: block;' : ''?>" >
 
 						<li >
 						<a href="<?php echo Yii::app()->createUrl('admin/banner')?>">广告列表</a>
@@ -258,7 +261,7 @@
 
 				</li>
 
-				<li class="">
+				<li class="<?php echo Yii::app()->controller->id=='news' ? 'open' : ''?> ">
 
 					<a href="javascript:;">
 
@@ -272,7 +275,7 @@
 
 					</a>
 
-					<ul class="sub-menu">
+					<ul class="sub-menu" style="<?php echo Yii::app()->controller->id=='news' ? 'display: block;' : ''?>" >
 
 						<li >
 
@@ -296,7 +299,7 @@
 
 				</li>
 
-				<li class="">
+				<li class="<?php echo Yii::app()->controller->id=='shop' ? 'open' : ''?>">
 
 					<a href="javascript:;">
 
@@ -308,7 +311,7 @@
 
 					</a>
 
-					<ul class="sub-menu">
+					<ul class="sub-menu" style="<?php echo Yii::app()->controller->id=='shop' ? 'display: block;' : ''?>" >
 
 						<li >
 
@@ -325,7 +328,7 @@
 
 				</li>
 
-				<li class="">
+				<li class="<?php echo Yii::app()->controller->id=='customer' ? 'open' : ''?> ">
 
 					<a href="javascript:;">
 
@@ -337,7 +340,7 @@
 
 					</a>
 
-					<ul class="sub-menu">
+					<ul class="sub-menu" style="<?php echo Yii::app()->controller->id=='customer' ? 'display: block;' : ''?>" >
 
 						
 						<li >
@@ -350,7 +353,7 @@
 
 				</li>
 
-				<li>
+				<li class="<?php echo Yii::app()->controller->id=='usergroup' ? 'open' : ''?> ">
 
 					<a class="active" href="javascript:;">
 
@@ -362,7 +365,7 @@
 
 					</a>
 
-					<ul class="sub-menu">
+					<ul class="sub-menu" style="<?php echo Yii::app()->controller->id=='usergroup' ? 'display: block;' : ''?>" >
 
 						<li>
 
@@ -402,7 +405,7 @@
 
 				</li>
 
-				<li class="">
+			<!--	<li class="">
 
 					<a href="javascript:;">
 
@@ -539,9 +542,10 @@
 					</a>
 
 				</li>
+				-->
 
 			</ul>
-
+			
 			<!-- END SIDEBAR MENU -->
 
 		</div>
