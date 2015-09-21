@@ -1,7 +1,7 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-$('#autoSearchText').autoSearchText({ width: 360, itemHeight: 150,minChar:1, datafn: getData, fn: alertMsg });
+	$('#autoSearchText').autoSearchText({ width: 360, itemHeight: 150,minChar:1, datafn: getData, fn: alertMsg });
 });
 function alertMsg(vl){
 	alert('你将要搜索的关键字是： '+vl);
@@ -9,8 +9,9 @@ function alertMsg(vl){
 /*加载数据*/
 function getData(val) {
 	var keyword=$("#autoSearchText").val();
+
 	var arrData = new Array();
-	if (val != "") {
+//	if (val != "") {
 		$.ajax({
 			type: "post",
 			async: false, //控制同步
@@ -28,7 +29,7 @@ function getData(val) {
 			alert(err);
 			}
 		});
-	}
+//	}
 	return arrData;
 }
 
@@ -39,69 +40,110 @@ function getData(val) {
  var itemIndex = 0;
 
  $.fn.autoSearchText = function(options) {
- //以下为该插件的属性及其默认值
-	 var deafult = {
-	 width: 360, //文本框宽
-	itemHeight: 150, // 下拉框高
-	minChar: 1, //最小字符数(从第几个开始搜索)
-	datafn: null, //加载数据函数
-	fn: null //选择项后触发的回调函数
-};
-var textDefault = $(this).val();
-var ops = $.extend(deafult, options);
-$(this).width(ops.width);
-var autoSearchItem = '<div id="autoSearchItem"><ul class="menu_v"></ul></div>';
-$(this).after(autoSearchItem);
-$('#autoSearchItem').width(372); //设置项宽
-$('#autoSearchItem').height(ops.itemHeight); //设置项高
-$(this).focus(function() {
-	if ($(this).val() == textDefault) {
-		$(this).val('');
-		$(this).css('color', 'black');
-	}
-});
-var itemCount = $('li').length; //项个数
-/*鼠标按下键时，显示下拉框，并且划过项时改变背景色及赋值给输入框*/
-$(this).bind('keyup', function(e) {
-if ($(this).val().length >= ops.minChar) {
-	var position = $(this).position();
-	$('#autoSearchItem').css({ 'visibility': 'visible', 'left': position.left, 'top': position.top + 24 });
-	
-	var data = ops.datafn($(this).val());
+	 //以下为该插件的属性及其默认值
+		var deafult = {
+			width: 360, //文本框宽
+			itemHeight: 150, // 下拉框高
+			minChar: 1, //最小字符数(从第几个开始搜索)
+			datafn: null, //加载数据函数
+			fn: null //选择项后触发的回调函数
+		};
+	var textDefault = $(this).val();
+	var ops = $.extend(deafult, options);
+	$(this).width(ops.width);
+	var autoSearchItem = '<div id="autoSearchItem"><ul class="menu_v"></ul></div>';
+	$(this).after(autoSearchItem);
+	$('#autoSearchItem').width(372); //设置项宽
+	$('#autoSearchItem').height(ops.itemHeight); //设置项高
+	$(this).focus(function() {
+		if ($(this).val() == textDefault) {
+			$(this).val('');
+			$(this).css('color', 'black');
+		}
+	});
+	var itemCount = $('li').length; //项个数
+	/*鼠标按下键时，显示下拉框，并且划过项时改变背景色及赋值给输入框*/
+	$(this).bind('keyup', function(e) {
+	if ($(this).val().length >= ops.minChar) {
+		var position = $(this).position();
+		$('#autoSearchItem').css({ 'visibility': 'visible', 'left': position.left, 'top': position.top + 24 });
+		
+		var data = ops.datafn($(this).val());
 
-	initItem($(this), data);
-	var itemCount = $('li').length;
-	switch (e.keyCode) {
-		case 38: //上
-			if (itemIndex > 1) {
-				itemIndex--;
-			}
-			$('li:nth-child(' + itemIndex + ')').css({ 'background': 'blue', 'color': 'white' });
-			$(this).val($('li:nth-child(' + itemIndex + ')').find('font').text());
-		break;
-		case 40: //下
-			if (itemIndex < itemCount) {
-				itemIndex++;
-			}
-			$('li:nth-child(' + itemIndex + ')').css({ 'background': 'blue', 'color': 'white' });
-			$(this).val($('li:nth-child(' + itemIndex + ')').find('font').text());
-		break;
-		case 13: //Enter
-			if (itemIndex > 0 && itemIndex <= itemCount) {
+		initItem($(this), data);
+		var itemCount = $('li').length;
+		switch (e.keyCode) {
+			case 38: //上
+				if (itemIndex > 1) {
+					itemIndex--;
+				}
+				$('li:nth-child(' + itemIndex + ')').css({ 'background': 'blue', 'color': 'white' });
 				$(this).val($('li:nth-child(' + itemIndex + ')').find('font').text());
-				$('#autoSearchItem').css('visibility', 'hidden');
-				ops.fn($(this).val());
-			}
-		break;
-		default:
-		break;
+			break;
+			case 40: //下
+				if (itemIndex < itemCount) {
+					itemIndex++;
+				}
+				$('li:nth-child(' + itemIndex + ')').css({ 'background': 'blue', 'color': 'white' });
+				$(this).val($('li:nth-child(' + itemIndex + ')').find('font').text());
+			break;
+			case 13: //Enter
+				if (itemIndex > 0 && itemIndex <= itemCount) {
+					$(this).val($('li:nth-child(' + itemIndex + ')').find('font').text());
+					$('#autoSearchItem').css('visibility', 'hidden');
+					ops.fn($(this).val());
+				}
+			break;
+			default:
+			break;
+		}
 	}
-}
-});
-/*点击空白处隐藏下拉框*/
-$(document).click(function() {
-	$('#autoSearchItem').css('visibility', 'hidden');
-});
+	});
+
+	$(this).bind('mouseover', function(e) {
+
+			var position = $(this).position();
+
+			$('#autoSearchItem').css({ 'visibility': 'visible', 'left': position.left, 'top': position.top + 24 });
+			
+			var data = ops.datafn($(this).val());
+
+			initItem($(this), data);
+
+			var itemCount = $('li').length;
+
+			switch (e.keyCode) {
+				case 38: //上
+					if (itemIndex > 1) {
+						itemIndex--;
+					}
+					$('li:nth-child(' + itemIndex + ')').css({ 'background': 'blue', 'color': 'white' });
+					$(this).val($('li:nth-child(' + itemIndex + ')').find('font').text());
+				break;
+				case 40: //下
+					if (itemIndex < itemCount) {
+						itemIndex++;
+					}
+					$('li:nth-child(' + itemIndex + ')').css({ 'background': 'blue', 'color': 'white' });
+					$(this).val($('li:nth-child(' + itemIndex + ')').find('font').text());
+				break;
+				case 13: //Enter
+					if (itemIndex > 0 && itemIndex <= itemCount) {
+						$(this).val($('li:nth-child(' + itemIndex + ')').find('font').text());
+						$('#autoSearchItem').css('visibility', 'hidden');
+						ops.fn($(this).val());
+					}
+				break;
+				default:
+				break;
+			}
+	
+	});
+
+	/*点击空白处隐藏下拉框*/
+	$(document).click(function() {
+		$('#autoSearchItem').css('visibility', 'hidden');
+	});
 };
 /*获取文本框的值*/
 $.fn.getValue = function() {
@@ -276,7 +318,7 @@ overflow-y:auto;
 									<div class="control-group">
 
 										<label for="Goods_spu_id" class="control-label required">SPU编号<span class="required">*</span></label>										<div class="controls">
-										<input id="autoSearchText" class="span6" name="Goods[spu_id]" type="text" value="<?php echo $model->spu_id?>" />
+										<input id="autoSearchText" autocomplete="off" class="span6" name="Goods[spu_id]" type="text" value="<?php echo $model->spu_id?>" />
 							
 																						
 										</div>

@@ -32,6 +32,7 @@ class Spu extends CActiveRecord
 			array('classfy_name','safe'),
 			array('series_id','safe'),
 			array('series_name','safe'),
+			array('created','safe'),
 
 		);
 
@@ -65,23 +66,25 @@ class Spu extends CActiveRecord
                 return $rec;
 	}
 
-	public function spu_name($keyword=null)
+	public function spu_name($keyword=Null)
 	{
-		  $rec = array();
+
+		  		$rec = array();
                 $criteria = new CDbCriteria;
                 $criteria->select = 't.spu_id,t.spu_name';
-                if($keyword<>null){
-	                $keyword = trim($_POST['keyword']);
+                if($keyword != Null){
+	                $keyword = trim($keyword);
 	                $criteria->addSearchCondition('classfy_name', $keyword,true,'OR');  
 	                $criteria->addSearchCondition('spu_name', $keyword,true,'OR');  
+	               
+	                $criteria->addSearchCondition('spu_id', $keyword,true,'OR');  
 	            }
-                $criteria->condition = '';
-                $data=Spu::model()->findAll($criteria);
+	            $criteria->order = 'created DESC' ;
+	            $criteria->limit =20;
+				$data= Spu::model()->findAll($criteria);  
                 for($i=0;$i<sizeof($data); $i++){
                 	$rec[$i][id]=$data[$i]['spu_id'];
                 	$rec[$i][name]=$data[$i]['spu_name'];
-
-               //  $rec[$data[$i]['spu_id']] = $data[$i]['spu_name'];
                 }
                 return $rec;
 	}

@@ -38,6 +38,7 @@ class SpuController extends Controller{
 				$series = Series::model()->findByPk($_POST['Spu']['series_id']);
 				$_POST['Spu']['classfy_name'] = $data['tree'];
 				$_POST['Spu']['series_name'] = $series['name'];
+				$_POST['Spu']['created']	= time();
 				$model->attributes = $_POST['Spu'];
 
 				if($model->save())

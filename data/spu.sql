@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version phpStudy 2014
 -- http://www.phpmyadmin.net
 --
@@ -41,6 +41,8 @@ CREATE TABLE IF NOT EXISTS `spu` (
   KEY `spu_id_2` (`spu_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='SPU表';
 
+/*!时间字段修改名称 */;
+ALTER TABLE `spu` CHANGE `add_time` `created` VARCHAR( 32 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL 
 --
 -- 转存表中的数据 `spu`
 --
